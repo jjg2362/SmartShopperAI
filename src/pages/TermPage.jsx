@@ -1,10 +1,9 @@
 import React from 'react';
+import TermLayout from '../components/TermLayout';
 
 const TermPage = () => {
   return (
-    <div>
-      <h1>Term Page</h1>
-    </div>
+      <TermLayout />
   )
 }
 
