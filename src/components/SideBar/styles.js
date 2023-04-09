@@ -7,6 +7,7 @@ export const Container = styled.nav`
   height: 100%;
   @media (max-width: 769px) {
     padding: 2rem;
+  width: auto;
   }
 `
 
