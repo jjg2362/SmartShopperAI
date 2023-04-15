@@ -9,13 +9,13 @@ import Consent2 from './components/Consent2';
 import Privacy from './components/Privacy';
 import TermLayout from './components/TermLayout';
 import TermOfUse from './components/TermOfUse';
-import TermPage from './pages/TermPage';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<TermPage />} />
+        <Route path="/" element={<HomePage />} />
 
         <Route element={<TermLayout />}>
           <Route path="/legal/terms" element={<TermOfUse />} />
