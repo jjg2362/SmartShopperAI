@@ -1,11 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import * as Styled from './styles'
 
 const Header = () => {
+  const navagate = useNavigate();
   return (
       <Styled.Container>
-        <Styled.Logo>
+        <Styled.Logo onClick={() => navagate('/')}>
         <svg
           width="40"
           fill="none"
@@ -26,7 +28,7 @@ const Header = () => {
 
         <Styled.HeaderButtonList>
           <li>
-            <Styled.HeaderButton isActive>
+            <Styled.HeaderButton isActive onClick={() => navagate('/')}>
               Home
             </Styled.HeaderButton>
           </li>

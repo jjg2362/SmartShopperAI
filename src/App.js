@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
-  BrowserRouter,
   Routes,
   Route,
+  useLocation,
 } from "react-router-dom";
 import Consent1 from './components/Consent1';
 import Consent2 from './components/Consent2';
@@ -12,8 +12,13 @@ import TermOfUse from './components/TermOfUse';
 import HomePage from './pages/HomePage';
 
 const App = () => {
+  const { pathname} = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
 
@@ -24,7 +29,6 @@ const App = () => {
           <Route path="/legal/consent2" element={<Consent2 />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 }
 

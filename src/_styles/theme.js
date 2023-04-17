@@ -4,7 +4,7 @@ const customMediaQuery = (maxWidth) =>
   `@media (max-width: ${maxWidth}px)`;
 
 const media = {
-  desktop: customMediaQuery(1104),
+  desktop: customMediaQuery(1296),
   tablet: customMediaQuery(769),
   phone: customMediaQuery(459),
 };
