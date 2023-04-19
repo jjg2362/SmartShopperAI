@@ -15,8 +15,11 @@ export const Content = styled.div`
   flex-direction: row;
   max-width: 1104px;
   
+  
   @media (max-width: 769px) {
-  flex-direction: column;
+    flex-direction: column;
+    max-width: auto;
+    width: 100%;
   }
   
 `
