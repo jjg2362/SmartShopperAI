@@ -21,5 +21,4 @@ export const Content = styled.div`
     max-width: auto;
     width: 100%;
   }
-  
 `

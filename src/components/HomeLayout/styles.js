@@ -1,4 +1,48 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+
+const TitleStyle = css`
+  font-size: 4.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @media (max-width: 459px) {
+    font-size: 3.4rem;
+  }
+`
+
+const DescriptionStyle = css`
+  font-size: 2.2rem;
+  line-height: 1.5;
+
+  @media (max-width: 459px) {
+    font-size: 1.8rem;
+  }
+`
+
+const GradientButton = css`
+  cursor: pointer;
+  background: linear-gradient(to left, #caf423, #00cabe); /* 그라데이션 배경색 설정 */
+  border: none;
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 1.8rem 3.2rem;
+
+  @media (max-width: 459px) {
+    font-size: 2rem;
+  }
+`
+
+const SubTitleStyle = css`
+  font-size: 1.6rem;
+  color: #5ccc5c;
+  font-weight: bold;
+  
+  @media (max-width: 459px) {
+    font-size: 1.4rem;
+  }
+`
 
 export const Container = styled.div`
   position: relative;
@@ -7,13 +51,14 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 `;
 
 export const HeaderWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;;
+  width: 100%;
 `
 
 export const FirstSection = styled.section`
@@ -22,6 +67,12 @@ export const FirstSection = styled.section`
   background-color: #141619;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1297px) {
+    height: auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const FirstSectionWrapper = styled.div`
@@ -30,12 +81,24 @@ export const FirstSectionWrapper = styled.div`
   padding: 23.6rem 0 21.3rem 0;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+  }
+
+  @media (max-width: 769px) {
+    flex-direction: column-reverse;
+  }
 `
 
 export const FirstLeftSection = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 55%;
+
+  @media (max-width: 1297px) {
+    width: 100%;
+  }
 `
 
 export const FirstSectionTitle = styled.h1`
@@ -49,58 +112,48 @@ export const FirstSectionTitle = styled.h1`
     color: inherit;
     font-weight: bold;
   }
+
+  @media (max-width: 459px) {
+    font-size: 4rem;
+  }
 `
 
 export const FirstSectionDescription = styled.p`
-  font-size: 2.2rem;
+  ${DescriptionStyle};
   color: #cccccc;
   margin-bottom: 3.3rem;
-  line-height: 1.5;
 `
 
 export const LearnMoreButton = styled.button`
-  cursor: pointer;
-  background: linear-gradient(to left, #caf423, #00cabe); /* 그라데이션 배경색 설정 */
-  border: none;
-  font-size: 2.4rem;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  width: 27rem;
-  height: 7rem;
+  ${GradientButton};
+  align-self: flex-start;
+`;
+
+export const ContactButton = styled.button`
+  ${GradientButton};
 `;
 
 export const FirstRightSection = styled.div`
-  position: relative;
-  width: 50%;
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
 
   & > img {
-    position: absolute;
+    width: auto;
+    height: 647px;
+    object-fit: contain;
+  }
+ 
 
-    &:nth-child(1) {
-      top: 0;
-      right: 0;
-      width: 470px;
-      height: auto;
-    }
+  @media (max-width: 1297px) {
+    margin-bottom: 6rem;
+    justify-content: center;
+  }
 
-    &:nth-child(2) {
-      top: -20px;
-      left: 0;
-    }
-
-    &:nth-child(3) {
-      top: 30px;
-      left: 60%;
-      transform: translateX(-50%);
-      width: 348px;
-      height: auto;
-    }
-
-    &:nth-child(4) {
-      bottom: -150px;
-      left: 150px;
-      width: 378px;
+  @media (max-width: 769px) {
+    width: 100%;
+    & > img {
+      width: 80%;
       height: auto;
     }
   }
@@ -114,6 +167,12 @@ export const SecondSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1297px) {
+    height: auto;
+    padding: 12rem 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const SecondSectionWrapper = styled.div`
@@ -121,34 +180,39 @@ export const SecondSectionWrapper = styled.div`
   width: 100%;
 
   & > h5 {
-    font-size: 1.6rem;
-    color: #5ccc5c;
+    ${SubTitleStyle};
     margin-bottom: 3rem;
-    font-weight: bold;
     text-align: center;
   }
 
   & > h1 {
-    font-size: 4.2rem;
+    ${TitleStyle};
     color: #fff;
     margin-bottom: 2.5rem;
-    font-weight: bold;
-    line-height: 1.5;
     text-align: center;
   }
 
   & > h3 {
-    font-size: 2.2rem;
+    ${DescriptionStyle};
     color: #ccc;
     margin-bottom: 8.1rem;
-    line-height: 1.5;
     text-align: center;
   }  
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+  }
 `
 
 export const SecondCardList = styled.ul`
   width: 100%;
   display: flex;
+
+  @media (max-width: 459px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const SecondCardItem = styled.li`
@@ -158,6 +222,22 @@ export const SecondCardItem = styled.li`
 
   &:last-child {
     padding-right: 0;
+  }
+
+  @media (max-width: 768px) {
+    height: 260px;
+    padding-right: 1.2rem;
+  }
+
+  @media (max-width: 459px) {
+    width: 70%;
+    height: 300px;
+
+    margin-bottom: 2.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `
 
@@ -197,6 +277,40 @@ export const SecondCardItemWrapper = styled.div`
     text-overflow: ellipsis;
     display: -webkit-box;
   }
+
+  @media (max-width: 769px) {
+    padding: 3rem 1.2rem;
+
+    & > img{
+      width: 40px;
+    }
+
+    & > h1{
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    & > p{
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 459px) {
+    padding: 3rem 1.2rem;
+
+    & > img{
+      width: 58px;
+    }
+
+    & > h1{
+      font-size: 2.2rem;
+      margin-bottom: 2.4rem;
+    }
+
+    & > p{
+      font-size: 2rem;
+    }
+  }
 `
 
 export const ContactUsWrapper = styled.div`
@@ -226,12 +340,26 @@ export const ThirdSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1297px) {
+    height: auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const ThirdSectionWrapper = styled.div`
   max-width: 1296px;
   width: 100%;
   display: flex;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    height: auto;
+    padding: 12rem 1rem;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
 `
 
 export const ThirdLeftSection = styled.div`
@@ -240,25 +368,20 @@ export const ThirdLeftSection = styled.div`
   width: 40%;
 
   & > h5{
-    font-size: 1.6rem;
-    color: #5ccc5c;
+    ${SubTitleStyle}
     margin-bottom: 3.2rem;
-    font-weight: bold;
   }
 
   & > h1 {
-    font-size: 4.2rem;
+    ${TitleStyle};
     color: #000;
     margin-bottom: 2.1rem;
-    font-weight: bold;
-    line-height: 1.5;
   }
 
   & > p {
-    font-size: 2.2rem;
+    ${DescriptionStyle};
     color: #000;
     margin-bottom: 6.8rem;
-    line-height: 1.5;
   }
 
   & > button {
@@ -266,6 +389,10 @@ export const ThirdLeftSection = styled.div`
     font-size: 2.2rem;
     color: #016dbb;
     font-weight: bold;
+  }
+
+  @media (max-width: 1297px) {
+    width: 100%;
   }
 `
 
@@ -291,39 +418,21 @@ export const ThirdImageSection = styled.div`
 
 export const ThirdRightSection = styled.div`
   position: relative;
-  width: 60%;
-  height: 100%;
 
   & > img {
-    position: absolute;
+    width: 736px;
+    height: auto;
+  }
 
-    &:nth-child(1) {
-      top: 0;
-      right: 0;
-      width: 636px;
-      height: auto;
-    }
+  @media (max-width: 1297px) {
+    margin-top: 6rem;
+    align-self: center;
+  }
 
-    &:nth-child(2) {
-      bottom: -120px;
-      left: 0;
-      width: 547px;
-      height: auto;
-    }
-
-    &:nth-child(3) {
-      bottom: -100px;
-      left: 0;
-      width: 547px;
-      height: auto;
-    }
-
-    &:nth-child(4) {
-      top: 45%;
-      left: 100px;
-      transform: translateY(-50%);
-      width: 140px;
-      height: auto;
+  @media (max-width: 769px) {
+    margin-top: 8rem;
+    & > img {
+      width: 100%;
     }
   }
 `
@@ -331,7 +440,7 @@ export const ThirdRightSection = styled.div`
 export const ThirdPlayTimeCircle = styled.div`
   position: absolute;
   top: -50px;
-  left: 160px;
+  left: 20%;
   border-radius: 50%;
   width: 220px;
   height: 220px;
@@ -355,12 +464,38 @@ export const ThirdPlayTimeCircle = styled.div`
     line-height: 1.5;
     text-align: center;
   }
+
+  @media (max-width: 769px) {
+    width: 160px;
+    height: 160px; 
+
+    & > h3 {
+      font-size: 3rem;
+    }
+
+    & > span{
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 459px) {
+    width: 120px;
+    height: 120px; 
+
+    & > h3 {
+      font-size: 2.4rem;
+    }
+
+    & > span{
+      font-size: 1.4rem;
+    }
+  }
 `
 
 export const ThirdRetentionCircle = styled.div`
   position: absolute;
   top: 40px;
-  right: -40px;
+  right: -10px;
   border-radius: 50%;
   width: 220px;
   height: 220px;
@@ -384,6 +519,32 @@ export const ThirdRetentionCircle = styled.div`
     line-height: 1.5;
     text-align: center;
   }
+
+  @media (max-width: 769px) {
+    width: 160px;
+    height: 160px; 
+
+    & > h3 {
+      font-size: 3rem;
+    }
+
+    & > span{
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 459px) {
+    width: 120px;
+    height: 120px; 
+
+    & > h3 {
+      font-size: 2.4rem;
+    }
+
+    & > span{
+      font-size: 1.4rem;
+    }
+  }
 `
 
 export const FourthSection = styled.section`
@@ -392,6 +553,10 @@ export const FourthSection = styled.section`
   background: #eef0f5;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1296px) {
+    height: auto;
+  }
 `
 
 export const FourthSectionWrapper = styled.div`
@@ -400,6 +565,14 @@ export const FourthSectionWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    height: auto;
+    padding: 12rem 1rem 0 1rem;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
 `
 
 export const FourthLeftSection = styled.div`
@@ -410,25 +583,20 @@ export const FourthLeftSection = styled.div`
   height: 100%;
 
   & > h5{
-    font-size: 1.6rem;
-    color: #5ccc5c;
+    ${SubTitleStyle};
     margin-bottom: 3.2rem;
-    font-weight: bold;
   }
 
   & > h1 {
-    font-size: 4.2rem;
+    ${TitleStyle};
     color: #000;
     margin-bottom: 2.1rem;
-    font-weight: bold;
-    line-height: 1.5;
   }
 
   & > p {
-    font-size: 2.2rem;
+    ${DescriptionStyle};
     color: #000;
     margin-bottom: 6.8rem;
-    line-height: 1.5;
   }
 
   & > button {
@@ -437,42 +605,76 @@ export const FourthLeftSection = styled.div`
     color: #016dbb;
     font-weight: bold;
   }
+
+  @media (max-width: 1296px) {
+    width: 100%;
+  }
 `
 
 export const FourthRightSection = styled.div`
   position: relative;
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   & > img {
-    position: absolute;
+    align-self: flex-end;
+    width: 628px;
+    height: auto;    
+  }
 
+  @media (max-width: 1296px) {
+    margin-top: 6rem;
+    width: 100%;
+
+    & > img {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 769px) {
+    & > img {
+      width: 80%;
+    }
+  }
+`
+
+export const GooglePlayButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 640px;
+  right: 20px;
+
+  & > img{
     &:nth-child(1) {
-      top: 192px;
-      right: 306px;
-      width: 80px;
-      height: auto;
+      width: auto;
+      height: 80px;
+      margin-right: 1rem;
     }
 
     &:nth-child(2) {
-      top: 174px;
-      right: 0;
-      width: 306px;
-      height: auto;
+      width: auto;
+      height: 80px;
     }
+  }
 
-    &:nth-child(3) {
-      bottom: 0;
-      right: 0;
-      width: 340px;
-      height: auto;
-    }
+  @media (max-width: 769px) {
+    justify-content: flex-end;
+    position: static;
+    margin-bottom: 2rem;
+    & > img{
+      &:nth-child(1) {
+        width: auto;
+        height: 60px;
+      }
 
-    &:nth-child(4) {
-      bottom: 0;
-      right: 320px;
-      width: 314px;
-      height: auto;
+      &:nth-child(2) {
+        width: auto;
+        height: 60px;
+      }
     }
   }
 `
@@ -483,25 +685,42 @@ export const FifthSection = styled.section`
   background: #141619;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1296px) {
+    height: auto;
+  }
 `
 
 export const FifthSectionWrapper = styled.div`
   position: relative;
-  width: 1296px;
+  max-width: 1296px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    height: auto;
+    padding: 12rem 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const FifthImageSection = styled.div`
   position: relative;
-  width: 1198px;
-  background-image: url('/Home_assets/img_d_01.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  & > img{
+    width: 1198px;
+    height: auto;
+  }
+`
+
+export const FifthCountryWrapper = styled.div`
   & > img{
     position: absolute;
 
@@ -533,6 +752,10 @@ export const FifthImageSection = styled.div`
       height: 40px;
     }
   }
+
+  @media (max-width: 1297px) {
+    display: none;
+  }
 `
 
 export const FifthTitleWrapper = styled.div`
@@ -543,16 +766,16 @@ export const FifthTitleWrapper = styled.div`
   flex-direction: column;
 
   & > h5{
-    font-size: 1.6rem;
-    color: #5ccc5c;
-    font-weight: bold;
+    ${SubTitleStyle};
   }
 
   & > h1{
-    font-size: 4.2rem;
+    ${TitleStyle};
     color: #fff;
-    font-weight: bold;
-    line-height: 1.5;
+  }
+
+  @media (max-width: 1297px) {
+    left: 10px;
   }
 `
 
@@ -565,6 +788,10 @@ export const FifthFloatImageWrapper = styled.div`
     width: 527px;
     height: auto;
   }
+
+  @media (max-width: 1297px) {
+    display: none;
+  }
 `
 
 export const SixthSection = styled.section`
@@ -573,14 +800,26 @@ export const SixthSection = styled.section`
   background: linear-gradient(to bottom, #ebeef4, #eaebf1); /* 그라데이션 배경색 설정 */
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1296px) {
+    height: auto;
+  }
 `
 
 export const SixthSectionWrapper = styled.div`
-  width: 1296px;
+  max-width: 1296px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    height: auto;
+    padding: 12rem 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const SixthTitleWrapper = styled.div`
@@ -588,59 +827,70 @@ export const SixthTitleWrapper = styled.div`
   flex-direction: column;
 
   & > h5{
-    font-size: 1.6rem;
-    color: #5ccc5c;
-    font-weight: bold;
+    ${SubTitleStyle};
     margin-bottom: 3.2rem;
   }
 
   & > h1{
-    font-size: 4.2rem;
+    ${TitleStyle};
     color: #000;
-    font-weight: bold;
-    line-height: 1.5;
   }
 `
 
 export const LuckmonResourceCardList = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 5rem;
+
+  @media (max-width: 769px) {
+    flex-wrap: wrap;
+  }
 `
 
-export const LuckmonResourceCard = styled.li`
-  width: 25%;
-  padding-right: 2.4rem;
+export const LuckmonResourceCardImageWrapper1 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: #cfcfcf;
+
+  & > img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+`
+
+export const LuckmonResourceCardImageWrapper2 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: #141619;
+
+  & > img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+`
+
+export const LuckmonResourceCardTitleWrapper = styled.div`
+  background-color: #fff;
+  padding: 2.7rem 3rem;
   box-sizing: border-box;
-  height: 356px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 50%;
+  width: 100%;
 
-  & > button {
-    cursor: pointer;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-
-    & > img{
-      width: 100%;
-      min-height: 178px;
-      object-fit: contain;
-    }
-
-    & > div{
-      height: 100%;
-      background-color: #fff;
-      padding: 2.7rem 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      & > h3{
-        font-size: 1.6rem;
-        color: #749c9a;
-        margin-bottom: 0.6rem;
-      }
+  & > h3{
+    font-size: 1.6rem;
+    color: #749c9a;
+    margin-bottom: 0.6rem;
+  }
 
       & > p {
         text-align: left;
@@ -655,7 +905,43 @@ export const LuckmonResourceCard = styled.li`
         text-overflow: ellipsis;
         display: -webkit-box;
       }
+
+  @media (max-width: 459px) {
+    padding: 1.7rem 2rem;
+  }
+`
+
+export const LuckmonResourceCard = styled.li`
+  width: 24%;
+  height: 356px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & > button {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    & > img{
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
     }
+  }
+
+  @media (max-width: 769px) {
+    width: 49%;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 459px) {
+    height: 286px;
   }
 `
 
@@ -666,6 +952,10 @@ export const SeventhSection = styled.section`
   background: linear-gradient(to bottom, #1c2039, #0a1713); /* 그라데이션 배경색 설정 */
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1296px) {
+    height: auto;
+  }
 `
 
 export const SeventhSectionWrapper = styled.div`
@@ -676,6 +966,13 @@ export const SeventhSectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    height: auto;
+    padding: 12rem 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const AlohaFactoryWrapper = styled.div`
@@ -710,21 +1007,56 @@ export const AlohaFactoryWrapper = styled.div`
     font-size: 1.8rem;
     color: #fff;
   }
+
+  @media (max-width: 1297px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 469px) {
+    & > h2{
+      font-size: 2.4rem;
+    }
+
+    & > h6{
+      font-size: 1.6rem;
+    }
+
+    & > span{
+      font-size: 1.6rem;
+    }
+  }
 `
 
 export const CompanyLogoWrapper = styled.div`
+  width: 100%;
   margin-top: 9.6rem;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 
   & > img{
     width: 170px;
     height: auto;
-    margin-right: 10rem;
 
     &:last-child{
       margin-right: 0;
+    }
+  }
+
+  @media (max-width: 769px) {
+    & > img{
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 459px) {
+    align-items: space-between;
+    flex-wrap: wrap;
+
+    & > img{
+      width: 40%;
+      margin-bottom: 1rem;
     }
   }
 `
@@ -744,6 +1076,10 @@ export const SeventhFloatImageWrapper = styled.div`
         width: 526px;
       } 
     }
+
+  @media (max-width: 1297px) {
+    display: none;
+  }
 `
 
 export const EighthSection = styled.section`
@@ -752,6 +1088,10 @@ export const EighthSection = styled.section`
   background: #141619;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1296px) {
+    height: auto;
+  }
 `
 
 export const EighthSectionWrapper = styled.div`
@@ -763,17 +1103,28 @@ export const EighthSectionWrapper = styled.div`
   align-items: center;
 
   & > h1{
+    ${TitleStyle};
     margin-top: 30.6rem;
-    font-size: 4.2rem;
     color: #fff;
-    font-weight: bold;
   }
 
   & > h5{
-    font-size: 2.2rem;
+    ${DescriptionStyle};
     color: #ccc;
     margin-top: 2.3rem;
     margin-bottom: 5.2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    height: auto;
+    padding: 12rem 1rem;
+    box-sizing: border-box;
+
+    & > h1{
+      margin-top: 0;
+    }
   }
 `
 
@@ -783,6 +1134,10 @@ export const Footer = styled.footer`
   background: #000;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1297px) {
+    height: auto;
+  }
 `
 
 export const FooterWrapper = styled.div`
@@ -792,6 +1147,12 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1297px) {
+    max-width: auto;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+  }
 `
 
 export const FooterLeftWrapper = styled.div`
@@ -814,6 +1175,15 @@ export const FooterLeftWrapper = styled.div`
       margin-right: 0;
     }
   }
+
+  @media (max-width: 769px) {
+    & > span{
+      margin-right: 2rem;
+    }
+    & > button{
+      margin-right: 1rem;
+    }
+  }
 `
 
 export const FooterRightWrapper = styled.div`
@@ -830,5 +1200,15 @@ export const FooterRightWrapper = styled.div`
      & > img {
       width: 40px;
      }
+  }
+
+  @media (max-width: 769px) {
+    & > button{
+      margin-right: 1rem;
+
+      & > img {
+        width: 30px;
+      }
+    }
   }
 `

@@ -26,10 +26,7 @@ const HomeLayout = () => {
           </Styled.FirstLeftSection>
 
           <Styled.FirstRightSection>
-            <img src='/Home_assets/img_a_03.png' alt=''/>
-            <img src='/Home_assets/img_a_01.png' alt=''/>
-            <img src='/Home_assets/img_a_04.png' alt=''/>
-            <img src='/Home_assets/img_a_02.png' alt=''/>
+            <img src='/Home_assets/first_section.png' alt='first_section_img'/>
           </Styled.FirstRightSection>
         </Styled.FirstSectionWrapper>
       </Styled.FirstSection>
@@ -96,10 +93,7 @@ const HomeLayout = () => {
           <button>Learn more</button>
         </Styled.ThirdLeftSection>
         <Styled.ThirdRightSection>
-          <img src='/Home_assets/img_b_03.jpg' alt='gem_image'/>
-          <img src='/Home_assets/img_b_02.png' alt='gem_image'/>
-          <img src='/Home_assets/img_b_01.png' alt='gem_image'/>
-          <img src='/Home_assets/New icon 1.png' alt='gem_image'/>
+          <img src='/Home_assets/third_section.png' alt='third_section_image'/>
 
           <Styled.ThirdPlayTimeCircle>
             <h3>50%</h3>
@@ -131,10 +125,11 @@ const HomeLayout = () => {
           <button>Learn more</button>
         </Styled.FourthLeftSection>
         <Styled.FourthRightSection>
-          <img src='/Home_assets/img_c_04.png' alt='gem_image'/>
-          <img src='/Home_assets/img_c_03.png' alt='gem_image'/>
-          <img src='/Home_assets/img_c_02.png' alt='gem_image'/>
-          <img src='/Home_assets/img_c_01.png' alt='gem_image'/>
+          <Styled.GooglePlayButtonWrapper>
+            <img src='/Home_assets/img_c_04.png' alt='gem_image'/>
+            <img src='/Home_assets/img_c_03.png' alt='gem_image'/>
+          </Styled.GooglePlayButtonWrapper>
+          <img src='/Home_assets/forth_section.png' alt='fourth_section_image'/>
         </Styled.FourthRightSection>
       </Styled.FourthSectionWrapper>
     </Styled.FourthSection>
@@ -144,11 +139,14 @@ const HomeLayout = () => {
     return <Styled.FifthSection>
       <Styled.FifthSectionWrapper>
         <Styled.FifthImageSection>
-          {/* <img src='/Home_assets/img_d_01.png' alt='gem_image'/> */}
-          <img src='/Home_assets/Group 4478.png' alt='gem_image'/>
-          <img src='/Home_assets/Group 4477.png' alt='gem_image'/>
-          <img src='/Home_assets/Group 4479.png' alt='gem_image'/>
-          <img src='/Home_assets/Group 4480.png' alt='gem_image'/>
+          <img src='/Home_assets/img_d_01.png' alt='fifth_map_image'/>
+
+          <Styled.FifthCountryWrapper>
+            <img src='/Home_assets/Group 4478.png' alt='gem_image'/>
+            <img src='/Home_assets/Group 4477.png' alt='gem_image'/>
+            <img src='/Home_assets/Group 4479.png' alt='gem_image'/>
+            <img src='/Home_assets/Group 4480.png' alt='gem_image'/>
+          </Styled.FifthCountryWrapper>
         </Styled.FifthImageSection>
 
         <Styled.FifthTitleWrapper>
@@ -167,10 +165,10 @@ const HomeLayout = () => {
     return <Styled.LuckmonResourceCard>
       <button onClick={() => window.open(url, "_blank")}>
         <img src={imageSrc} alt={`luckmon_card_${index}`}/>
-        <div>
+        <Styled.LuckmonResourceCardTitleWrapper>
           <h3>{type}</h3>
           <p>{description}</p>
-        </div>
+        </Styled.LuckmonResourceCardTitleWrapper>
       </button>
     </Styled.LuckmonResourceCard>
   }
@@ -194,16 +192,28 @@ const HomeLayout = () => {
             'INTERVIEW', 
             'With Kevin Harrington, a business executive, Shark Tank', 
             'https://abc.com/shows/shark-tank')}
-            {renderLuckmonResourceCard(3, 
-            '/Home_assets/LM03.png', 
-            'PRESS', 
-            'Thomas Edison Project with Luckmon', 
-            'https://finance.yahoo.com/news/thomas-edison-nft-project-announces-150100712.html')}
-            {renderLuckmonResourceCard(4, 
-            '/Home_assets/LM04.png', 
-            'PRESS', 
-            'Luckmon Makes Gaming Lucrative for Casual Players', 
-            'https://www.builtinla.com/2022/12/12/los-angeles-future-5-startup-luckmon-q4-2022?i=bb756a35-d66f-4de6-ac3d-d69877a12a45&utm_source=transactional&utm_medium=email&utm_campaign=Built-In-Email&fbclid=IwAR1hV1IHKVx_VQqCFfl8LR9yHV6VUoVUtXJ4qI7Y-rWsRb6qpOVF0IlcUuE')}
+            <Styled.LuckmonResourceCard>
+              <button onClick={() => window.open('https://finance.yahoo.com/news/thomas-edison-nft-project-announces-150100712.html', "_blank")}>
+                <Styled.LuckmonResourceCardImageWrapper1>
+                  <img src='/Home_assets/LM03.png' alt={`luckmon_card_${3}`}/>
+                </Styled.LuckmonResourceCardImageWrapper1>
+                <Styled.LuckmonResourceCardTitleWrapper>
+                  <h3>PRESS</h3>
+                  <p>homas Edison Project with Luckmon</p>
+                </Styled.LuckmonResourceCardTitleWrapper>
+              </button>
+            </Styled.LuckmonResourceCard>
+            <Styled.LuckmonResourceCard>
+              <button onClick={() => window.open('https://www.builtinla.com/2022/12/12/los-angeles-future-5-startup-luckmon-q4-2022?i=bb756a35-d66f-4de6-ac3d-d69877a12a45&utm_source=transactional&utm_medium=email&utm_campaign=Built-In-Email&fbclid=IwAR1hV1IHKVx_VQqCFfl8LR9yHV6VUoVUtXJ4qI7Y-rWsRb6qpOVF0IlcUuE', "_blank")}>
+              <Styled.LuckmonResourceCardImageWrapper2>
+                  <img src='/Home_assets/LM04.png' alt={`luckmon_card_${4}`}/>
+                </Styled.LuckmonResourceCardImageWrapper2>
+                <Styled.LuckmonResourceCardTitleWrapper>
+                  <h3>PRESS</h3>
+                  <p>Luckmon Makes Gaming Lucrative for Casual Players</p>
+                </Styled.LuckmonResourceCardTitleWrapper>
+              </button>
+            </Styled.LuckmonResourceCard>
         </Styled.LuckmonResourceCardList>
       </Styled.SixthSectionWrapper>
     </Styled.SixthSection>
@@ -244,9 +254,9 @@ const HomeLayout = () => {
         <h1>Ready to get started?</h1>
         <h5>Supercharge your growth with the leader in game marketing with Luckmon.</h5>
 
-        <Styled.LearnMoreButton>
+        <Styled.ContactButton>
           Contact Luckmon
-        </Styled.LearnMoreButton>
+        </Styled.ContactButton>
       </Styled.EighthSectionWrapper>
     </Styled.EighthSection>
   }
