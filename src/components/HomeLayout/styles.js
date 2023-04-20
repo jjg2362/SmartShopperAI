@@ -89,7 +89,6 @@ export const FirstSectionWrapper = styled.div`
   }
 
   @media (max-width: 769px) {
-    padding: 2rem 0 7rem 0;
     flex-direction: column-reverse;
   }
 `
@@ -173,7 +172,7 @@ export const SecondSection = styled.section`
 
   @media (max-width: 1297px) {
     height: auto;
-    padding: 7rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -367,7 +366,7 @@ export const ThirdSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 7rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -580,7 +579,7 @@ export const FourthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 7rem 1rem 0 1rem;
+    padding: 24rem 1rem 0 1rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -714,7 +713,7 @@ export const FifthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 7.6rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -828,7 +827,7 @@ export const SixthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 7rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `

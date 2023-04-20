@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
 
     * {
-        font-family: 'LINESeedSans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'LINESeedSans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif !important;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
