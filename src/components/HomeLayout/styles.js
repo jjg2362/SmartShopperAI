@@ -37,7 +37,7 @@ const GradientButton = css`
 const SubTitleStyle = css`
   font-size: 1.6rem;
   color: #5ccc5c;
-  font-weight: bold;
+  font-weight: 500;
   
   @media (max-width: 459px) {
     font-size: 1.4rem;
@@ -170,7 +170,7 @@ export const SecondSection = styled.section`
 
   @media (max-width: 1297px) {
     height: auto;
-    padding: 12rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -356,7 +356,7 @@ export const ThirdSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 12rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -569,7 +569,7 @@ export const FourthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 12rem 1rem 0 1rem;
+    padding: 24rem 1rem 0 1rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -703,7 +703,7 @@ export const FifthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 12rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -817,7 +817,7 @@ export const SixthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 12rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -970,7 +970,7 @@ export const SeventhSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 12rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -1119,96 +1119,11 @@ export const EighthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 12rem 1rem;
+    padding: 24rem 1rem;
     box-sizing: border-box;
 
     & > h1{
       margin-top: 0;
-    }
-  }
-`
-
-export const Footer = styled.footer`
-  width: 100%;
-  height: 140px;
-  background: #000;
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: 1297px) {
-    height: auto;
-  }
-`
-
-export const FooterWrapper = styled.div`
-  max-width: 1296px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: 1297px) {
-    max-width: auto;
-    padding: 3rem 1rem;
-    box-sizing: border-box;
-  }
-`
-
-export const FooterLeftWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  & > span{
-    font-size: 1.4rem;
-    color: #fff;
-    margin-right: 8rem;
-  }
-
-  & > button{
-    font-size: 1.4rem;
-    color: #fff;
-    margin-right: 5rem;
-
-    &:last-child{
-      margin-right: 0;
-    }
-  }
-
-  @media (max-width: 769px) {
-    & > span{
-      margin-right: 2rem;
-    }
-    & > button{
-      margin-right: 1rem;
-    }
-  }
-`
-
-export const FooterRightWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  & > button{
-    margin-right: 2.4rem;
-
-    &:last-child{
-      margin-right: 0;
-    }
-     & > img {
-      width: 40px;
-     }
-  }
-
-  @media (max-width: 769px) {
-    & > button{
-      margin-right: 1rem;
-
-      & > img {
-        width: 30px;
-      }
     }
   }
 `

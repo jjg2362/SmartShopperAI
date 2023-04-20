@@ -44,7 +44,7 @@ export const HeaderButtonList = styled.ul`
 
 export const HeaderButton = styled.button`
   font-size: 1.6rem;
-  color: ${(props) => props.isActive ? '#5ccc5c' : '#fff'}};
+  color: ${(props) => props.isActive ? '#5ccc5c' : '#fff'};
   transition: all 0.3s ease;
 
   &:hover{

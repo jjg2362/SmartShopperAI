@@ -1,11 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
+import "../_fonts/Font.css";
+
 const GlobalStyle = createGlobalStyle`
     ${reset}
 
     * {
-        font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-family: 'LINESeedSans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     html {
@@ -32,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5, h6, p, span, a, strong, em{
         font-size: 1.6rem;
         color: #000000;
+        font-family: 'LINESeedSans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     strong {
