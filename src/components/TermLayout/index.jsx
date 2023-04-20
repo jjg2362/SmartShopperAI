@@ -10,6 +10,7 @@ const TermLayout = () => {
   return (
       <Styled.Container>
         <Header />
+
         <Styled.Layout>
           <Styled.SideBarWrapper>
             <SideBar/>

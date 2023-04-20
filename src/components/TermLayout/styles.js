@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -8,6 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #141619;
+  max-width: 100vw;
 `;
 
 export const Layout = styled.div`
@@ -35,7 +37,7 @@ export const SideBarWrapper = styled.nav`
 export const Content = styled.article`
   flex: 1 1 auto;
   overflow-x: auto;
-
+  
   *{
     color: #fff;
     line-height: 1.5;

@@ -25,6 +25,10 @@ export const FooterWrapper = styled.div`
     padding: 3rem 1rem;
     box-sizing: border-box;
   }
+
+  @media (max-width: 459px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const FooterLeftWrapper = styled.div`
@@ -61,6 +65,20 @@ export const FooterLeftWrapper = styled.div`
       margin-right: 1rem;
     }
   }
+
+  @media (max-width: 459px) {
+    flex-direction: column-reverse;
+
+    & > span {
+      margin-right: 0;
+      margin-top: 2rem;
+    }
+
+    & > button{
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
 `;
 
 export const FooterRightWrapper = styled.div`
@@ -86,6 +104,13 @@ export const FooterRightWrapper = styled.div`
       & > img {
         width: 30px;
       }
+    }
+  }
+
+  @media (max-width: 459px) {
+    margin-bottom: 2rem;
+    & > button {
+      margin-right: 2.4rem;
     }
   }
 `;

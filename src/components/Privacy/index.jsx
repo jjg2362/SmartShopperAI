@@ -8,7 +8,7 @@ import * as Styled from './styles'
 const Privacy = () => {
   
   return <Styled.Container>
-    <ReactMarkdown children={codes} remarkPlugins={[remarkGfm]} />,
+    <ReactMarkdown children={codes} remarkPlugins={[remarkGfm]} />
   </Styled.Container>
 }
 

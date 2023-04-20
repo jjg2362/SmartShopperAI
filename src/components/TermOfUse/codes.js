@@ -1,4 +1,6 @@
 export const codes = `
+# Terms of use
+
 ### ACCEPTANCE OF TERMS
 
 Please read these terms and conditions (this “Agreement” or these “Terms”) carefully. This Agreement is effective when the User clicks on the “AGREE & CONTINUE” button during the Luckmon account creation process (the “Effective Date”) and by doing so, User agrees to be bound by the terms of this Agreement.

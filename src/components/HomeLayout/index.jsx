@@ -261,18 +261,18 @@ const HomeLayout = () => {
   }
 
   return <Styled.Container>
-      <Styled.HeaderWrapper>
-        <Header />
-      </Styled.HeaderWrapper>
+      <Header />
 
-      {renderFirstSection()}
-      {renderSecondSection()}
-      {renderThirdSection()}
-      {renderFourthSection()}
-      {renderFifthSection()}
-      {renderSixthSection()}
-      {renderSeventhSection()}
-      {renderEighthSection()}
+      <Styled.Content>
+        {renderFirstSection()}
+        {renderSecondSection()}
+        {renderThirdSection()}
+        {renderFourthSection()}
+        {renderFifthSection()}
+        {renderSixthSection()}
+        {renderSeventhSection()}
+        {renderEighthSection()}
+      </Styled.Content>
 
       <Footer />
     </Styled.Container>

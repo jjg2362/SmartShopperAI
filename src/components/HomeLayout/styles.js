@@ -47,18 +47,19 @@ const SubTitleStyle = css`
 export const Container = styled.div`
   position: relative;
   width: 100%;
+  max-width: 100vw;
+  height: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Content = styled.main`
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-`;
-
-export const HeaderWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
 `
 
 export const FirstSection = styled.section`
@@ -79,6 +80,7 @@ export const FirstSectionWrapper = styled.div`
   max-width: 1296px;
   width: 100%;
   padding: 23.6rem 0 21.3rem 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
 
@@ -329,6 +331,14 @@ export const ContactUsWrapper = styled.div`
     font-size: 1.6rem;
     font-weight: bold;
     color: #5ccc5c;
+  }
+
+  @media (max-width: 769px) {
+      flex-direction: column;
+
+    & > button{
+      margin-top: 1.2rem;
+    }
   }
 `
 
