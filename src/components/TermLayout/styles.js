@@ -61,6 +61,14 @@ export const Content = styled.article`
     font-weight: 500;
   }
 
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
   table {
     width: 100%;
     margin: 2rem 0;
