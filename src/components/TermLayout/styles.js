@@ -40,7 +40,7 @@ export const Content = styled.article`
   
   *{
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 1.6rem;
   }
 
@@ -67,6 +67,26 @@ export const Content = styled.article`
 
   strong {
     font-weight: 500;
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin: 1rem 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
   }
 
   table {
