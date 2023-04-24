@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 const TitleStyle = css`
   font-size: 4.2rem;
@@ -43,6 +43,28 @@ const SubTitleStyle = css`
     font-size: 1.4rem;
   }
 `
+
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+export const StyledText = styled.div`
+  opacity: 0;
+  transform: translateY(20px);
+  ${(props) => props.isShow && css`
+    animation: ${fadeIn} 1s ease-in-out forwards;
+    `
+  };
+`;
+
 
 export const Container = styled.div`
   position: relative;
@@ -209,6 +231,29 @@ export const SecondSectionWrapper = styled.div`
 export const SecondCardList = styled.ul`
   width: 100%;
   display: flex;
+
+  & > li {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  ${(props) => props.isShow && css`
+      & > li {
+        &:nth-child(1) {
+          animation: ${fadeIn} 0.6s ease-in-out forwards;
+        }
+
+        &:nth-child(2) {
+          animation: ${fadeIn} 0.6s ease-in-out forwards;
+          animation-delay: 0.3s;
+        }
+
+        &:nth-child(3) {
+          animation: ${fadeIn} 0.6s ease-in-out forwards;
+          animation-delay: 0.6s;
+        }
+    } 
+  `}
 
   @media (max-width: 459px) {
     flex-direction: column;
@@ -441,13 +486,24 @@ export const ThirdRightSection = styled.div`
 
   @media (max-width: 769px) {
     margin-top: 8rem;
+
     & > img {
       width: 100%;
     }
   }
 `
 
+const ThirdPlayTimeCircleAnimation = keyframes`
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: -30px;
+  }
+`
+
 export const ThirdPlayTimeCircle = styled.div`
+  animation: ${ThirdPlayTimeCircleAnimation} 1s 1s infinite alternate;
   position: absolute;
   top: -50px;
   left: 20%;
@@ -502,7 +558,17 @@ export const ThirdPlayTimeCircle = styled.div`
   }
 `
 
+const ThirdRetentionCircleAnimation = keyframes`
+  0% {
+    top: 40px;
+  }
+  100% {
+    top: 60px;
+  }
+`
+
 export const ThirdRetentionCircle = styled.div`
+  animation: ${ThirdRetentionCircleAnimation} 1s 1s infinite alternate;
   position: absolute;
   top: 40px;
   right: -10px;
@@ -675,6 +741,7 @@ export const GooglePlayButtonWrapper = styled.div`
     justify-content: flex-end;
     position: static;
     margin-bottom: 2rem;
+    
     & > img{
       &:nth-child(1) {
         width: auto;

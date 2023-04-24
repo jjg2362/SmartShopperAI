@@ -10,6 +10,8 @@ import Privacy from './components/Privacy';
 import TermLayout from './components/TermLayout';
 import TermOfUse from './components/TermOfUse';
 import HomePage from './pages/HomePage';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
   const { pathname} = useLocation();

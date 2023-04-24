@@ -1,20 +1,67 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 import Header from '../Header'
 import Footer from '../Footer'
 import * as Styled from './styles'
+import Carousal from '../Carousal'
 
 const HomeLayout = () => {
-  const sectionRef = useRef(null);
+  const firstSectionRef = useRef(null);
+  const [showFirstTitle, setShowFirstTitle] = useState(false);
+  const secondSectionRef = useRef(null);
+  const [showSecondCard, setshowSecondCard] = useState(false);
+  const thirdSectionRef = useRef(null);
+  const [showThirdCard, setshowThirdCard] = useState(false);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+        entries => {
+          if (entries[0].isIntersecting) {
+            setShowFirstTitle(true);
+          } else {
+            setShowFirstTitle(false);
+          }
+        },
+        { threshold: 0 }
+      );
+      observer.observe(firstSectionRef.current);
+
+      const observer2 = new IntersectionObserver(
+        entries => {
+          if (entries[0].isIntersecting) {
+            setshowSecondCard(true);
+          } else {
+            setshowSecondCard(false);
+          }
+        },
+        { threshold: 0 }
+      );
+      observer2.observe(secondSectionRef.current);
+
+      const observer3 = new IntersectionObserver(
+        entries => {
+          if (entries[0].isIntersecting) {
+            setshowThirdCard(true);
+          } else {
+            setshowThirdCard(false);
+          }
+        },
+        { threshold: 0 }
+      );
+      observer3.observe(thirdSectionRef.current);
+  }, []);
+
 
   const renderFirstSection = () => {
     return (
       <Styled.FirstSection>
         <Styled.FirstSectionWrapper>
-          <Styled.FirstLeftSection>
-            <Styled.FirstSectionTitle>
-              Grow your <em>games</em> with<br />the <em>leading loyalty<br />platform.</em>
-            </Styled.FirstSectionTitle>
+          <Styled.FirstLeftSection ref={firstSectionRef}>
+            <Styled.StyledText isShow={showFirstTitle}>
+              <Styled.FirstSectionTitle>
+                Grow your <em>games</em> with<br />the <em>leading loyalty<br />platform.</em>
+              </Styled.FirstSectionTitle>
+            </Styled.StyledText>
 
             <Styled.FirstSectionDescription>
               Our solution is built to expand your game users and <br />your revenue.
@@ -45,13 +92,14 @@ const HomeLayout = () => {
   }
 
   const renderSecondSection = () => {
-    return <Styled.SecondSection id="section2" ref={sectionRef}>
-      <Styled.SecondSectionWrapper>
+    return <Styled.SecondSection id="section2">
+      <Styled.SecondSectionWrapper >
       <h5>BUILT FOR GAME DEVELOPERS</h5>
       <h1>Fuel your mobile game growth with our<br />loyalty platfrom</h1>
       <h3>Our end-to-end loyalty platform optimizes retention, empowers data-driven marketing<br />decisions, and uses machine learning technology to ensure profitable UA, All while helping<br />you deliver personalized experiences to your users on a global scale.</h3>
 
-      <Styled.SecondCardList>
+      <div ref={secondSectionRef}>
+      <Styled.SecondCardList isShow={showSecondCard}>
         {renderSecondCardItem(
           '/Home_assets/direct-hit_1f3af1.png', 
           'Game user targeting', 
@@ -65,6 +113,7 @@ const HomeLayout = () => {
           'Higher retention', 
           'Drive longer play times and keep\nplayers coming back for more with our\nplatform’s new player incentives and\nretention-focused tools.\n ')}
       </Styled.SecondCardList>
+      </div>
 
       <Styled.ContactUsWrapper>
         <span>Ready to accelerate the growth of your mobile games?</span>
@@ -91,18 +140,22 @@ const HomeLayout = () => {
 
           <button>Learn more</button>
         </Styled.ThirdLeftSection>
-        <Styled.ThirdRightSection>
-          <img src='/Home_assets/third_section.png' alt='third_section_image'/>
+        <div ref={thirdSectionRef}>
+          <Styled.StyledText isShow={showThirdCard}>
+            <Styled.ThirdRightSection>
+              <img src='/Home_assets/third_section.png' alt='third_section_image'/>
 
-          <Styled.ThirdPlayTimeCircle>
-            <h3>50%</h3>
-            <span>Play-time<br/>increases</span>
-          </Styled.ThirdPlayTimeCircle>
-          <Styled.ThirdRetentionCircle>
-            <h3>50%</h3>
-            <span>Higher<br/>retentions</span>
-          </Styled.ThirdRetentionCircle>
-        </Styled.ThirdRightSection>
+              <Styled.ThirdPlayTimeCircle>
+                <h3>50%</h3>
+                <span>Play-time<br/>increases</span>
+              </Styled.ThirdPlayTimeCircle>
+              <Styled.ThirdRetentionCircle>
+                <h3>50%</h3>
+                <span>Higher<br/>retentions</span>
+              </Styled.ThirdRetentionCircle>
+            </Styled.ThirdRightSection>
+          </Styled.StyledText>
+        </div>
       </Styled.ThirdSectionWrapper>
     </Styled.ThirdSection>
   }
@@ -232,12 +285,13 @@ const HomeLayout = () => {
           <span>Head of Monetization and User Acquisition, Aloha Factory</span>
         </Styled.AlohaFactoryWrapper>
 
-        <Styled.CompanyLogoWrapper>
+        <Carousal />
+        {/* <Styled.CompanyLogoWrapper>
           <img src='/Home_assets/logoA_01.png' alt='super_box_logo'/>
           <img src='/Home_assets/logoB_01.png' alt='n_Way_logo'/>
           <img src='/Home_assets/logoC_01.png' alt='grampus_logo'/>
           <img src='/Home_assets/logoD_01.png' alt='supercent_logo'/>
-        </Styled.CompanyLogoWrapper>
+        </Styled.CompanyLogoWrapper> */}
 
         <Styled.SeventhFloatImageWrapper>
             <img src='/Home_assets/img_e_02.png' alt='super_box_logo'/>
