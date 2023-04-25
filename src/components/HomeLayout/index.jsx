@@ -178,8 +178,12 @@ const HomeLayout = () => {
         </Styled.FourthLeftSection>
         <Styled.FourthRightSection>
           <Styled.GooglePlayButtonWrapper>
-            <img src='/Home_assets/img_c_04.png' alt='gem_image'/>
-            <img src='/Home_assets/img_c_03.png' alt='gem_image'/>
+            <button onClick={() => window.open('https://play.google.com/store/apps/details?id=com.luckmon.luckmongames&hl=en&gl=US')}>
+              <img src='/Home_assets/img_c_04.png' alt='game_image'/>
+            </button>
+            <button onClick={() => window.open('https://play.google.com/store/apps/details?id=com.luckmon.luckmongames&hl=en&gl=US')}>
+              <img src='/Home_assets/img_c_03.png' alt='google_play_store_image'/>
+            </button>
           </Styled.GooglePlayButtonWrapper>
           <img src='/Home_assets/forth_section.png' alt='fourth_section_image'/>
         </Styled.FourthRightSection>
@@ -307,7 +311,7 @@ const HomeLayout = () => {
         <h1>Ready to get started?</h1>
         <h5>Supercharge your growth with the leader in game marketing with Luckmon.</h5>
 
-        <Styled.ContactButton>
+        <Styled.ContactButton onClick={() => window.open('mailto:marketing@luckmon.com', '_blank')}>
           Contact Luckmon
         </Styled.ContactButton>
       </Styled.EighthSectionWrapper>

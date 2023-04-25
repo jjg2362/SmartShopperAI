@@ -724,7 +724,7 @@ export const GooglePlayButtonWrapper = styled.div`
   bottom: 640px;
   right: 20px;
 
-  & > img{
+  img{
     &:nth-child(1) {
       width: auto;
       height: 80px;

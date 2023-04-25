@@ -21,20 +21,20 @@ const Footer = () => {
         </Styled.FooterLeftWrapper>
 
         <Styled.FooterRightWrapper>
-          <button>
+          <button onClick={() => window.open('https://twitter.com/LuckmonGames', "_blank")}>
             <img src="/Home_assets/Group 371.png" alt="twitter_icon" />
           </button>
-          <button>
+          {/* <button>
             <img src="/Home_assets/Group 367.png" alt="discord_icon" />
-          </button>
-          <button>
+          </button> */}
+          <button onClick={() => window.open('https://www.instagram.com/luckmonofficial/', "_blank")}>
             <img src="/Home_assets/Group 368.png" alt="instagram_icon" />
           </button>
-          <button>
+          <button onClick={() => window.open('https://www.facebook.com/luckmongames', "_blank")}>
             <img src="/Home_assets/Group 369.png" alt="facebook_icon" />
           </button>
-          <button>
-            <img src="/Home_assets/Group 370.png" alt="video_icon" />
+          <button onClick={() => window.open('https://medium.com/@luckmon', "_blank")}>
+            <img src="/Home_assets/Group 370.png" alt="medium_icon" />
           </button>
         </Styled.FooterRightWrapper>
       </Styled.FooterWrapper>
