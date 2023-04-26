@@ -35,6 +35,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #141619;
+  overflow-x: hidden;
 `;
 
 export const Content = styled.div`
