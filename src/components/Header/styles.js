@@ -6,7 +6,7 @@ export const Container = styled.header`
   height: 60px;
   box-sizing: border-box;
   z-index: 999;
-  background-color: #141619;
+  background-color: #000;
 
   @media (max-width : 769px){
     position: sticky;
@@ -160,6 +160,10 @@ const HeaderButtonStyle = css`
   font-weight: bold;
   transition: all 0.3s ease;
   color: ${(props) => props.isActive ? '#5ccc5c' : '#fff'};
+
+  &:hover {
+    color: #5ccc5c;
+  }
 `
 
 export const HeaderButton = styled.button`
