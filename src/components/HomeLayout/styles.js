@@ -37,7 +37,7 @@ const GradientButton = css`
 const SubTitleStyle = css`
   font-size: 1.6rem;
   color: #5ccc5c;
-  font-weight: 500;
+  font-weight: bold;
   
   @media (max-width: 459px) {
     font-size: 1.4rem;
@@ -112,6 +112,7 @@ export const FirstSectionWrapper = styled.div`
 
   @media (max-width: 769px) {
     flex-direction: column-reverse;
+    padding: 10rem 0 7rem 0;
   }
 `
 
@@ -194,7 +195,7 @@ export const SecondSection = styled.section`
 
   @media (max-width: 1297px) {
     height: auto;
-    padding: 24rem 1rem;
+    padding: 8rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -411,7 +412,7 @@ export const ThirdSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 24rem 1rem;
+    padding: 8rem 1rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -437,13 +438,6 @@ export const ThirdLeftSection = styled.div`
     ${DescriptionStyle};
     color: #000;
     margin-bottom: 6.8rem;
-  }
-
-  & > button {
-    align-self: flex-start;
-    font-size: 2.2rem;
-    color: #016dbb;
-    font-weight: bold;
   }
 
   @media (max-width: 1297px) {
@@ -645,7 +639,7 @@ export const FourthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 24rem 1rem 0 1rem;
+    padding: 8rem 1rem 0 1rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -780,7 +774,7 @@ export const FifthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 24rem 1rem;
+    padding: 8rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -894,7 +888,7 @@ export const SixthSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 24rem 1rem;
+    padding: 8rem 1rem;
     box-sizing: border-box;
   }
 `
@@ -981,6 +975,7 @@ export const LuckmonResourceCardTitleWrapper = styled.div`
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         display: -webkit-box;
+        white-space: pre-wrap;
       }
 
   @media (max-width: 459px) {
@@ -1047,7 +1042,7 @@ export const SeventhSectionWrapper = styled.div`
   @media (max-width: 1297px) {
     max-width: auto;
     height: auto;
-    padding: 24rem 1rem;
+    padding: 8rem 1rem;
     box-sizing: border-box;
   }
 `

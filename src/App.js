@@ -30,6 +30,8 @@ const App = () => {
           <Route path="/legal/consent1" element={<Consent1 />} />
           <Route path="/legal/consent2" element={<Consent2 />} />
         </Route>
+
+        <Route path="*" element={<HomePage />} />
       </Routes>
   );
 }

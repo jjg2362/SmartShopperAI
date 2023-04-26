@@ -1,11 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import * as Styled from './styles'
 import Carousal from '../Carousal'
+import * as Styled from './styles'
 
 const HomeLayout = () => {
+  const navigate = useNavigate();
   const firstSectionRef = useRef(null);
   const [showFirstTitle, setShowFirstTitle] = useState(false);
   const secondSectionRef = useRef(null);
@@ -66,8 +68,8 @@ const HomeLayout = () => {
             <Styled.FirstSectionDescription>
               Our solution is built to expand your game users and <br />your revenue.
             </Styled.FirstSectionDescription>
-            <Styled.LearnMoreButton >
-              Learn More
+            <Styled.LearnMoreButton onClick={() => navigate('/contact')}>
+              Contact us
             </Styled.LearnMoreButton>
           </Styled.FirstLeftSection>
 
@@ -117,7 +119,7 @@ const HomeLayout = () => {
 
       <Styled.ContactUsWrapper>
         <span>Ready to accelerate the growth of your mobile games?</span>
-        <button>Contact us</button>
+        <button onClick={() => navigate('/contact')}>Contact us</button>
       </Styled.ContactUsWrapper>
       </Styled.SecondSectionWrapper>
     </Styled.SecondSection>
@@ -137,8 +139,6 @@ const HomeLayout = () => {
           <p>
           Our end-to-end loyalty platform provides an engaging and personalized gaming experience, with features designed to increase player satisfaction and retention. With our advanced analytics, we track user behavior and make data driven decisions to continually increase the growth of our user retention rates.
           </p>
-
-          <button>Learn more</button>
         </Styled.ThirdLeftSection>
         <div ref={thirdSectionRef}>
           <Styled.StyledText isShow={showThirdCard}>
@@ -173,8 +173,6 @@ const HomeLayout = () => {
           <h1>We set out to build a premier global loyalty platform for mobile gamers</h1>
           <p>
           Reshape your mobile game with our loyalty platform’s comprehensive suite of loyalty-focused features, including trophy systems, reward management, and personalized incentives, all designed to increase user engagement and satisfaction on a global scale.</p>
-
-          <button>Learn more</button>
         </Styled.FourthLeftSection>
         <Styled.FourthRightSection>
           <Styled.GooglePlayButtonWrapper>
@@ -248,17 +246,11 @@ const HomeLayout = () => {
             'INTERVIEW', 
             'With Kevin Harrington, a business executive, Shark Tank', 
             'https://abc.com/shows/shark-tank')}
-            <Styled.LuckmonResourceCard>
-              <button onClick={() => window.open('https://finance.yahoo.com/news/thomas-edison-nft-project-announces-150100712.html', "_blank")}>
-                <Styled.LuckmonResourceCardImageWrapper1>
-                  <img src='/Home_assets/LM03.png' alt={`luckmon_card_${3}`}/>
-                </Styled.LuckmonResourceCardImageWrapper1>
-                <Styled.LuckmonResourceCardTitleWrapper>
-                  <h3>PRESS</h3>
-                  <p>homas Edison Project with Luckmon</p>
-                </Styled.LuckmonResourceCardTitleWrapper>
-              </button>
-            </Styled.LuckmonResourceCard>
+            {renderLuckmonResourceCard(3, 
+            '/Home_assets/LM03.jpeg', 
+            'INTERVIEW', 
+            `Partnership\nNeicon - Luckmon`, 
+            'https://www.gametoc.co.kr/news/articleView.html?idxno=72434')}
             <Styled.LuckmonResourceCard>
               <button onClick={() => window.open('https://www.builtinla.com/2022/12/12/los-angeles-future-5-startup-luckmon-q4-2022?i=bb756a35-d66f-4de6-ac3d-d69877a12a45&utm_source=transactional&utm_medium=email&utm_campaign=Built-In-Email&fbclid=IwAR1hV1IHKVx_VQqCFfl8LR9yHV6VUoVUtXJ4qI7Y-rWsRb6qpOVF0IlcUuE', "_blank")}>
               <Styled.LuckmonResourceCardImageWrapper2>
@@ -311,7 +303,7 @@ const HomeLayout = () => {
         <h1>Ready to get started?</h1>
         <h5>Supercharge your growth with the leader in game marketing with Luckmon.</h5>
 
-        <Styled.ContactButton onClick={() => window.open('mailto:marketing@luckmon.com', '_blank')}>
+        <Styled.ContactButton onClick={() => navigate('/contact')}>
           Contact Luckmon
         </Styled.ContactButton>
       </Styled.EighthSectionWrapper>

@@ -3,28 +3,49 @@ import styled, {css} from 'styled-components';
 export const Container = styled.header`
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 60px;
   box-sizing: border-box;
   z-index: 999;
   background-color: #141619;
 
   @media (max-width : 769px){
-    justify-content: flex-end;
     position: sticky;
     top: 0;
     left: 0;
   }
 `;
 
+export const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width : 1296px){
+    justify-content: flex-end;
+  }
+`
+
 export const Logo = styled.div`
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 60px;
   transform: translateY(-50%);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  & > h1 {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  @media (max-width : 1296px){
+    left: 20px;
+  }
 `
 
 export const HeaderButtonList = styled.ul`
@@ -34,10 +55,10 @@ export const HeaderButtonList = styled.ul`
 
   & > li{
     margin-right: 70px;
-  }
 
-  &:last-child{
-    margin-right: 0;
+    &:last-child{
+      margin-right: 20px;
+    }
   }
 
   @media (max-width : 769px){
@@ -46,16 +67,6 @@ export const HeaderButtonList = styled.ul`
     & > li{
       margin-right: 20px;
     }
-  }
-`
-
-export const HeaderButton = styled.button`
-  font-size: 1.6rem;
-  color: ${(props) => props.isActive ? '#5ccc5c' : '#fff'};
-  transition: all 0.3s ease;
-
-  &:hover{
-    color: #5ccc5c;
   }
 `
 
@@ -138,20 +149,25 @@ export const SidebarButtonList = styled.ul`
   & > li{
     margin-bottom: 4.2rem;
 
-    & > button {
-      font-size: 2.4rem;
-      font-weight: 500;
-      color: #fff;
-    } 
-
-    &:nth-child(1) {
-      & > button{
-        color: #5ccc5c;
-      }
-    }
-
     &:last-child{
       margin-bottom: 0;
     }
   }
+`
+
+const HeaderButtonStyle = css`
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  color: ${(props) => props.isActive ? '#5ccc5c' : '#fff'};
+`
+
+export const HeaderButton = styled.button`
+  ${HeaderButtonStyle};
+  font-size: 1.6rem;
+`
+
+export const SidebarButton = styled.button`
+  ${HeaderButtonStyle};
+  font-size: 2.2rem;
 `

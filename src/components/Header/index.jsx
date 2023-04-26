@@ -1,14 +1,63 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import * as Styled from './styles'
 
+const HeaderMenuList = [
+  {
+    id: 0,
+    name: 'Home',
+    path: ''
+  },
+  {
+    id: 1,
+    name: 'About',
+    path: '/about'
+  },
+  {
+    id: 2,
+    name: 'Blog',
+    path: 'https://medium.com/@luckmon '
+  },
+  {
+    id: 3,
+    name: 'Contact',
+    path: '/contact'
+  }
+]
+
 const Header = () => {
+  const { pathname } = useLocation();
   const navagate = useNavigate();
   const [isToggleHam, setIsToggleHam] = useState(false);
+  const [currentPath, setCurrentPath] = useState('');
+
+  useEffect(() => {
+    if(pathname.includes('about')){
+      setCurrentPath('about');
+    }
+    else if(pathname.includes('contact')) {
+      setCurrentPath('contact');
+    }
+    else{
+      setCurrentPath('');
+    }
+  }, [pathname])
+
+  const onClickHeaderMenu = (path) => {
+    if(path.includes('https')) {
+      window.open(path, "_blank")
+    }
+    else {
+      navagate(path)
+    }
+  }
+
+  console.log(currentPath)
 
   return (
       <Styled.Container>
+        <Styled.HeaderWrapper>
         <Styled.Logo onClick={() => navagate('/')}>
           <svg
             width="40"
@@ -26,29 +75,19 @@ const Header = () => {
               fill="#AFEE3C"
             ></path>
           </svg>
+
+          <h1>LUCKMON</h1>
         </Styled.Logo>
 
         <Styled.HeaderButtonList>
-          <li>
-            <Styled.HeaderButton isActive onClick={() => navagate('/')}>
-              Home
+          {HeaderMenuList.map((item) => {
+            const isActive = item.path.replace('/', '') === currentPath;
+            return <li key={`header_${item.id}`}>
+            <Styled.HeaderButton isActive={isActive} onClick={() => onClickHeaderMenu(item.path)}>
+              {item.name}
             </Styled.HeaderButton>
           </li>
-          <li>
-            <Styled.HeaderButton>
-              About Us
-            </Styled.HeaderButton>
-          </li>
-          <li>
-            <Styled.HeaderButton>
-              Games
-            </Styled.HeaderButton>
-          </li>
-          <li>
-            <Styled.HeaderButton>
-              Company
-            </Styled.HeaderButton>
-          </li>
+          })}
         </Styled.HeaderButtonList>
 
         <Styled.HamButton isOpen={isToggleHam} onClick={() => setIsToggleHam(!isToggleHam)}>
@@ -59,28 +98,17 @@ const Header = () => {
 
         <Styled.SideBarWrapper isOpen={isToggleHam}>
         <Styled.SidebarButtonList>
-          <li>
-            <button onClick={() => navagate('/')}>
-              Home
-            </button>
-          </li>
-          <li>
-            <button>
-              About Us
-            </button>
-          </li>
-          <li>
-            <button>
-              Games
-            </button>
-          </li>
-          <li>
-            <button>
-              Company
-            </button>
-          </li>
+          {HeaderMenuList.map((item) => {
+            const isActive = item.path.replace('/', '') === currentPath;
+              return <li key={`sidebar_${item.id}`}>
+              <Styled.SidebarButton isActive={isActive}  onClick={() => onClickHeaderMenu(item.path)}>
+                {item.name}
+              </Styled.SidebarButton>
+            </li>
+            })}
         </Styled.SidebarButtonList>
         </Styled.SideBarWrapper>
+        </Styled.HeaderWrapper>
       </Styled.Container>
   )
 }
