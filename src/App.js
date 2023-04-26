@@ -10,8 +10,10 @@ import Privacy from './components/Privacy';
 import TermLayout from './components/TermLayout';
 import TermOfUse from './components/TermOfUse';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+// import Layout from './components/Layout';
 
 const App = () => {
   const { pathname} = useLocation();
@@ -23,6 +25,7 @@ const App = () => {
   return (
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
 
         <Route element={<TermLayout />}>
           <Route path="/legal/terms" element={<TermOfUse />} />

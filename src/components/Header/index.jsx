@@ -7,7 +7,7 @@ const HeaderMenuList = [
   {
     id: 0,
     name: 'Home',
-    path: ''
+    path: '/'
   },
   {
     id: 1,

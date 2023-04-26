@@ -65,7 +65,6 @@ export const StyledText = styled.div`
   };
 `;
 
-
 export const Container = styled.div`
   position: relative;
   width: 100%;
