@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 const TitleStyle = css`
   font-size: 4.2rem;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.25;
   text-align: center;
 
   @media (max-width: 459px) {
@@ -84,7 +84,7 @@ export const MissionTitleWrapper = styled.div`
   & > h1 {
     font-size: 5.8rem;
     font-weight: bold;
-    line-height: 1.5;
+    line-height: 1.25;
     color: #fff;
     margin-bottom: 2.8rem;
     text-align: center;
@@ -135,7 +135,7 @@ export const TeamSection = styled.section`
 `
 
 export const TeamSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -162,7 +162,7 @@ export const TeamTitleWrapper = styled.div`
     height: 100%;
     margin-bottom: 2.3rem;
 
-    @media (max-width: 1296px) {
+    @media (max-width: 1220px) {
       width: 80%;
       height: auto;
     }
@@ -179,13 +179,14 @@ export const MemberList = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 `
 
 export const MemberItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   width: 30%;
   margin-bottom: 10rem;
 
@@ -201,6 +202,10 @@ export const MemberItem = styled.li`
   }
 
   @media (max-width: 769px) {
-    width: 60%;
+    width: 40%;
+
+    & > img {
+      width: 80%;
+    }
   }
 `

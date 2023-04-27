@@ -1,21 +1,37 @@
 import styled, {css} from 'styled-components';
 
 export const Container = styled.header`
-  position: relative;
   width: 100%;
-  height: 60px;
+  height: 68px;
   box-sizing: border-box;
   z-index: 999;
-  background-color: #000;
+  top: 0;
+  left: 0;
+  position: fixed;
+`;
 
-  @media (max-width : 769px){
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
+export const HeaderBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+  transition: all 0.3s ease;
+
+  ${(props) => props.isSticky ? css`
+    background-color: #000;
+    opacity: 0.8;
+  ` : css`
+    background-color: transparent;
+  `}
 `;
 
 export const HeaderWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,13 +51,6 @@ export const Logo = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-
-  & > h1 {
-    margin-left: 1rem;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: bold;
-  }
 
   @media (max-width : 1296px){
     left: 20px;

@@ -61,12 +61,12 @@ const HomeLayout = () => {
           <Styled.FirstLeftSection ref={firstSectionRef}>
             <Styled.StyledText isShow={showFirstTitle}>
               <Styled.FirstSectionTitle>
-                Grow your <em>games</em> with<br />the <em>leading loyalty<br />platform.</em>
+                Grow your <em>games</em> with the <em>leading loyalty platform.</em>
               </Styled.FirstSectionTitle>
             </Styled.StyledText>
 
             <Styled.FirstSectionDescription>
-              Our solution is built to expand your game users and <br />your revenue.
+              Our solution is built to expand your game users and your revenue.
             </Styled.FirstSectionDescription>
             <Styled.LearnMoreButton onClick={() => navigate('/contact')}>
               Contact us
@@ -248,7 +248,7 @@ const HomeLayout = () => {
             'https://abc.com/shows/shark-tank')}
             {renderLuckmonResourceCard(3, 
             '/Home_assets/LM03.jpeg', 
-            'INTERVIEW', 
+            'PRESS', 
             `Partnership\nNeicon - Luckmon`, 
             'https://www.gametoc.co.kr/news/articleView.html?idxno=72434')}
             <Styled.LuckmonResourceCard>
@@ -277,7 +277,7 @@ const HomeLayout = () => {
           channels on Android with 30% better retention, our main<br />
           performance KPI.”</h2>
 
-          <h6>Robin Yoon</h6>
+          <h6>Madison Steele</h6>
           <span>Head of Monetization and User Acquisition, Aloha Factory</span>
         </Styled.AlohaFactoryWrapper>
 

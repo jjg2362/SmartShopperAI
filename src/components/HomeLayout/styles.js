@@ -3,7 +3,7 @@ import styled, {css, keyframes} from "styled-components";
 const TitleStyle = css`
   font-size: 4.2rem;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.25;
 
   @media (max-width: 459px) {
     font-size: 3.4rem;
@@ -38,6 +38,7 @@ const SubTitleStyle = css`
   font-size: 1.6rem;
   color: #5ccc5c;
   font-weight: bold;
+  
   
   @media (max-width: 459px) {
     font-size: 1.4rem;
@@ -90,22 +91,22 @@ export const FirstSection = styled.section`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     height: auto;
-    padding: 0 1rem;
+    padding: 0 4rem;
     box-sizing: border-box;
   }
 `
 
 export const FirstSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   padding: 23.6rem 0 21.3rem 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
   }
 
@@ -120,15 +121,19 @@ export const FirstLeftSection = styled.div`
   flex-direction: column;
   width: 55%;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     width: 100%;
+  }
+
+  @media (max-width: 769px) {
+    align-items: center;
   }
 `
 
 export const FirstSectionTitle = styled.h1`
   font-size: 5.8rem;
   color: #fff;
-  line-height: 1.5;
+  line-height: 1.25;
   margin-bottom: 5.5rem;
 
   & > em {
@@ -137,8 +142,13 @@ export const FirstSectionTitle = styled.h1`
     font-weight: bold;
   }
 
+  @media (max-width: 769px) {
+    text-align: center;
+    margin-bottom: 2.3rem;
+  }
+
   @media (max-width: 459px) {
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
 `
 
@@ -146,11 +156,16 @@ export const FirstSectionDescription = styled.p`
   ${DescriptionStyle};
   color: #cccccc;
   margin-bottom: 3.3rem;
+  text-align: center;
 `
 
 export const LearnMoreButton = styled.button`
   ${GradientButton};
   align-self: flex-start;
+
+  @media (max-width: 769px) {
+    align-self: auto;
+  }
 `;
 
 export const ContactButton = styled.button`
@@ -169,7 +184,7 @@ export const FirstRightSection = styled.div`
   }
  
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     margin-bottom: 6rem;
     justify-content: center;
   }
@@ -192,15 +207,15 @@ export const SecondSection = styled.section`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     height: auto;
-    padding: 8rem 1rem;
+    padding: 8rem 4rem;
     box-sizing: border-box;
   }
 `
 
 export const SecondSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
 
   & > h5 {
@@ -223,7 +238,7 @@ export const SecondSectionWrapper = styled.div`
     text-align: center;
   }  
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
   }
 `
@@ -277,7 +292,7 @@ export const SecondCardItem = styled.li`
   }
 
   @media (max-width: 459px) {
-    width: 70%;
+    width: 80%;
     height: 300px;
 
     margin-bottom: 2.4rem;
@@ -370,6 +385,7 @@ export const ContactUsWrapper = styled.div`
     font-size: 1.6rem;
     color: #ccc;
     margin-right: 0.8rem;
+    text-align: center;
   }
 
   & > button{
@@ -396,22 +412,21 @@ export const ThirdSection = styled.section`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     height: auto;
-    padding: 0 1rem;
     box-sizing: border-box;
   }
 `
 
 export const ThirdSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   display: flex;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
-    padding: 8rem 1rem;
+    padding: 8rem 4rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -439,7 +454,7 @@ export const ThirdLeftSection = styled.div`
     margin-bottom: 6.8rem;
   }
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     width: 100%;
   }
 `
@@ -472,13 +487,13 @@ export const ThirdRightSection = styled.div`
     height: auto;
   }
 
-  @media (max-width: 1297px) {
-    margin-top: 6rem;
+  @media (max-width: 1220px) {
+    margin-top: 2rem;
     align-self: center;
   }
 
   @media (max-width: 769px) {
-    margin-top: 8rem;
+    margin-top: 4rem;
 
     & > img {
       width: 100%;
@@ -623,22 +638,22 @@ export const FourthSection = styled.section`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1296px) {
+  @media (max-width: 1220px) {
     height: auto;
   }
 `
 
 export const FourthSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
-    padding: 8rem 1rem 0 1rem;
+    padding: 8rem 4rem 0 4rem;
     box-sizing: border-box;
     flex-direction: column;
   }
@@ -648,7 +663,7 @@ export const FourthLeftSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 48%;
   height: 100%;
 
   & > h5{
@@ -675,14 +690,14 @@ export const FourthLeftSection = styled.div`
     font-weight: bold;
   }
 
-  @media (max-width: 1296px) {
+  @media (max-width: 1220px) {
     width: 100%;
   }
 `
 
 export const FourthRightSection = styled.div`
   position: relative;
-  width: 50%;
+  width: 52%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -690,12 +705,12 @@ export const FourthRightSection = styled.div`
 
   & > img {
     align-self: flex-end;
-    width: 628px;
+    width: 600px;
     height: auto;    
   }
 
-  @media (max-width: 1296px) {
-    margin-top: 6rem;
+  @media (max-width: 1220px) {
+    margin-top: 10rem;
     width: 100%;
 
     & > img {
@@ -715,13 +730,20 @@ export const GooglePlayButtonWrapper = styled.div`
   flex-direction: row;
   position: absolute;
   bottom: 640px;
-  right: 20px;
+  right: 0;
+
+  & > button {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   img{
     &:nth-child(1) {
       width: auto;
       height: 80px;
-      margin-right: 1rem;
     }
 
     &:nth-child(2) {
@@ -731,11 +753,13 @@ export const GooglePlayButtonWrapper = styled.div`
   }
 
   @media (max-width: 769px) {
-    justify-content: flex-end;
+    justify-content: center;
     position: static;
     margin-bottom: 2rem;
-    
-    & > img{
+  }
+
+  @media (max-width: 459px) {
+    img{
       &:nth-child(1) {
         width: auto;
         height: 60px;
@@ -756,24 +780,24 @@ export const FifthSection = styled.section`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1296px) {
+  @media (max-width: 1220px) {
     height: auto;
   }
 `
 
 export const FifthSectionWrapper = styled.div`
   position: relative;
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
-    padding: 8rem 1rem;
+    padding: 2rem 4rem;
     box-sizing: border-box;
   }
 `
@@ -823,7 +847,7 @@ export const FifthCountryWrapper = styled.div`
     }
   }
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     display: none;
   }
 `
@@ -844,8 +868,8 @@ export const FifthTitleWrapper = styled.div`
     color: #fff;
   }
 
-  @media (max-width: 1297px) {
-    left: 10px;
+  @media (max-width: 1220px) {
+    left: 40px;
   }
 `
 
@@ -859,7 +883,7 @@ export const FifthFloatImageWrapper = styled.div`
     height: auto;
   }
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     display: none;
   }
 `
@@ -871,23 +895,23 @@ export const SixthSection = styled.section`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1296px) {
+  @media (max-width: 1220px) {
     height: auto;
   }
 `
 
 export const SixthSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
-    padding: 8rem 1rem;
+    padding: 8rem 4rem;
     box-sizing: border-box;
   }
 `
@@ -915,6 +939,10 @@ export const LuckmonResourceCardList = styled.ul`
 
   @media (max-width: 769px) {
     flex-wrap: wrap;
+  }
+
+  @media (max-width: 459px) {
+    justify-content: center;
   }
 `
 
@@ -960,6 +988,7 @@ export const LuckmonResourceCardTitleWrapper = styled.div`
     font-size: 1.6rem;
     color: #749c9a;
     margin-bottom: 0.6rem;
+    font-weight: bold;
   }
 
       & > p {
@@ -1012,7 +1041,8 @@ export const LuckmonResourceCard = styled.li`
   }
 
   @media (max-width: 459px) {
-    height: 286px;
+    width: 80%;
+    height: 246px;
   }
 `
 
@@ -1024,13 +1054,13 @@ export const SeventhSection = styled.section`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1296px) {
+  @media (max-width: 1220px) {
     height: auto;
   }
 `
 
 export const SeventhSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1038,10 +1068,10 @@ export const SeventhSectionWrapper = styled.div`
   align-items: center;
   position: relative;
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
-    padding: 8rem 1rem;
+    padding: 8rem 4rem 4rem 4rem;
     box-sizing: border-box;
   }
 `
@@ -1077,9 +1107,10 @@ export const AlohaFactoryWrapper = styled.div`
     margin-top: 0.8rem;
     font-size: 1.8rem;
     color: #fff;
+    text-align: center;
   }
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     margin-top: 0;
   }
 
@@ -1148,7 +1179,7 @@ export const SeventhFloatImageWrapper = styled.div`
       } 
     }
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     display: none;
   }
 `
@@ -1160,13 +1191,13 @@ export const EighthSection = styled.section`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1296px) {
+  @media (max-width: 1220px) {
     height: auto;
   }
 `
 
 export const EighthSectionWrapper = styled.div`
-  max-width: 1296px;
+  max-width: 1220px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1187,10 +1218,10 @@ export const EighthSectionWrapper = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 1297px) {
+  @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
-    padding: 24rem 1rem;
+    padding: 8rem 4rem;
     box-sizing: border-box;
 
     & > h1{

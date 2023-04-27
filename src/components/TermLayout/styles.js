@@ -18,6 +18,7 @@ export const Layout = styled.div`
   max-width: 1296px;
   padding-bottom: 7rem;
   box-sizing: border-box;
+  padding-top: 10rem;
   
   @media (max-width: 769px) {
     flex-direction: column;
