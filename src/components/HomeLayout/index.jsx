@@ -193,13 +193,15 @@ const HomeLayout = () => {
     return <Styled.FifthSection>
       <Styled.FifthSectionWrapper>
         <Styled.FifthImageSection>
-          <img src='/Home_assets/img_d_01.png' alt='fifth_map_image'/>
+          <Styled.FifthImageBackground>
+            <img src='/Home_assets/img_d_01.png' alt='fifth_map_image'/>
+          </Styled.FifthImageBackground>
 
           <Styled.FifthCountryWrapper>
             <img src='/Home_assets/Group 4478.png' alt='gem_image'/>
             <img src='/Home_assets/Group 4477.png' alt='gem_image'/>
             <img src='/Home_assets/Group 4479.png' alt='gem_image'/>
-            <img src='/Home_assets/Group 4480.png' alt='gem_image'/>
+            <img src='/Home_assets/Group 4481.png' alt='gem_image'/>
           </Styled.FifthCountryWrapper>
         </Styled.FifthImageSection>
 

@@ -46,14 +46,14 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 14.9rem 0 52.3rem 0;
+  padding: 16rem 0 52.3rem 0;
   box-sizing: border-box;
 
   @media (max-width: 769px) {
     max-width: auto;
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     box-sizing: border-box;
   }
 `
@@ -83,7 +83,7 @@ export const TopWrapper = styled.div`
   & > h1 {
     font-size: 5.8rem;
     font-weight: bold;
-    line-height: 1.5;
+    line-height: 1.25;
     color: #fff;
     margin-bottom: 2.8rem;
     text-align: center;
@@ -104,6 +104,10 @@ export const TopWrapper = styled.div`
       right: -240px;
       width: 436px;
       height: auto;
+
+      @media (max-width: 768px) {
+        right: -140px;
+      }
     }
 
     &:nth-child(2) {
@@ -112,6 +116,10 @@ export const TopWrapper = styled.div`
       left: -100px;
       width: 153px;
       height: auto;
+
+      @media (max-width: 768px) {
+        right: -50px;
+      }
     }
   }
 `

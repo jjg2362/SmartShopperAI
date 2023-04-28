@@ -60,6 +60,7 @@ const AboutLayout = () => {
     <Header />
 
     <Styled.MissionSection>
+      <Styled.MissionWrapper>
       <Styled.MissionBackground />
       <Styled.MissionTitleWrapper>
         <h5>OUR MISSION</h5>
@@ -67,6 +68,7 @@ const AboutLayout = () => {
         <p>Our goal is to create a fun and engaging way for gamers to<br />earn rewards while playing games on any platform, anywhere.</p>
         <img src="/About_assets/image 1177.png" alt="mission_character" />
       </Styled.MissionTitleWrapper>
+      </Styled.MissionWrapper>
     </Styled.MissionSection>
 
     <Styled.TeamSection>

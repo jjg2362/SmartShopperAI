@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const TitleStyle = css`
   font-size: 4.2rem;
@@ -69,6 +69,42 @@ export const MissionSection = styled.section`
   overflow: hidden;
 `
 
+export const MissionWrapper = styled.div`
+  width: 100%;
+  max-width: 1220px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 1220px) {
+    max-width: auto;
+    padding: 0 4rem;
+    box-sizing: border-box;
+  }
+`
+
+const ScaleUpAnimation = keyframes`
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+`;
+
+const FloatAnimation = keyframes`
+  from {
+    padding-bottom: 0;
+  }
+  to {
+    padding-bottom: 20px;
+  }
+`;
+
 export const MissionTitleWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -101,11 +137,17 @@ export const MissionTitleWrapper = styled.div`
   }
 
   & > img{
+    animation: ${ScaleUpAnimation} 1s ease-in-out forwards;
     width: 621px;
     height: auto;
 
     @media (max-width: 769px) {
       width: 460px;
+      height: auto;
+    }
+
+    @media (max-width: 459px) {
+      width: 360px;
       height: auto;
     }
   }

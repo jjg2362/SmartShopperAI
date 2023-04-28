@@ -775,7 +775,7 @@ export const GooglePlayButtonWrapper = styled.div`
 
 export const FifthSection = styled.section`
   width: 100%;
-  height: 760px;
+  height: 780px;
   background: #141619;
   display: flex;
   justify-content: center;
@@ -791,24 +791,25 @@ export const FifthSectionWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  box-sizing: border-box;
 
   @media (max-width: 1220px) {
     max-width: auto;
     height: auto;
     padding: 2rem 4rem;
-    box-sizing: border-box;
   }
 `
 
 export const FifthImageSection = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+`
 
-  & > img{
+export const FifthImageBackground = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+ & > img{
     width: 1198px;
     height: auto;
   }
@@ -817,47 +818,54 @@ export const FifthImageSection = styled.div`
 export const FifthCountryWrapper = styled.div`
   & > img{
     position: absolute;
+    width: auto;
+    height: 30px;
 
     &:nth-child(1) {
       top: 210px;
       left: 50px;
-      width: auto;
-      height: 30px;
     }
 
     &:nth-child(2) {
       top: 250px;
       left: 5px;
-      width: auto;
-      height: 30px;
     }
 
     &:nth-child(3) {
       top: 290px;
       left: 40px;
-      width: auto;
-      height: 30px;
     }
 
     &:nth-child(4) {
-      top: 230px;
-      right: 145px;
-      width: auto;
-      height: 40px;
+      top: 265px;
+      right: 200px;
     }
   }
 
   @media (max-width: 1220px) {
-    display: none;
+    position: absolute;
+    bottom: 380px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+  }
+
+  @media (max-width: 459px) {
+    & > img{
+      margin-bottom: 1rem;
+      position: static;
+      height: 25px;
+    }
   }
 `
 
 export const FifthTitleWrapper = styled.div`
-  position: absolute;
-  bottom: 200px;
-  left: 0;
   position: flex;
   flex-direction: column;
+  padding-top: 42.1rem;
+  padding-bottom: 22.1rem;
+  box-sizing: border-box;
 
   & > h5{
     ${SubTitleStyle};
@@ -869,6 +877,7 @@ export const FifthTitleWrapper = styled.div`
   }
 
   @media (max-width: 1220px) {
+    width: 100%;
     left: 40px;
   }
 `
