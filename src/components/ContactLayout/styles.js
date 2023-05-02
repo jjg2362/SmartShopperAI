@@ -1,4 +1,54 @@
 import styled, { css, keyframes } from "styled-components";
+import Modal from 'react-modal';
+
+export const ModalHeader = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const NeoModal = styled(Modal)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+`;
+
+export const CloseButton = styled.button`
+  padding: 0;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+
+  & > svg {
+    font-size: 4rem;
+  }
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+`;
+
+export const ModalFooter = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+const fadeInUp = keyframes`
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+`
 
 const GradientButton = css`
   cursor: pointer;
@@ -58,17 +108,7 @@ export const Content = styled.div`
   }
 `
 
-const GemFloatingAnimation = keyframes`
-  0% {
-    bottom: -140px;
-  }
-  100% {
-    bottom: -130px;
-  }
-`
-
 export const TopWrapper = styled.div`
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -94,31 +134,33 @@ export const TopWrapper = styled.div`
       font-size: 4rem;
     }
   }
+`
+
+export const TopImageWrapper = styled.div`
+  position: relative;
 
   & > img{
     position: absolute;
     z-index: 1;
-
-    &:first-child {
-      top: 20px;
-      right: -240px;
-      width: 436px;
+    &:nth-child(1) {
+      top: -120px;
+      right: -150px;
+      width: 226px;
       height: auto;
+      animation: ${fadeInUp} 1s;
 
       @media (max-width: 768px) {
-        right: -140px;
       }
     }
 
     &:nth-child(2) {
-      /* animation: ${GemFloatingAnimation} 1s infinite alternate; */
-      bottom: -140px;
-      left: -100px;
-      width: 153px;
+      top: 130px;
+      right: -180px;
+      width: 64px;
       height: auto;
+      animation: ${fadeInUp} 1s;
 
       @media (max-width: 768px) {
-        right: -50px;
       }
     }
   }
@@ -169,7 +211,109 @@ export const FormSection = styled.section`
   }
 `
 
+export const Form = styled.form`
+ width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & > input {
+      outline: none;
+      border: 0;
+      border-radius: 8px;
+      width: 100%;
+      height: 40px;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+    & > textarea {
+      outline: none;
+      border: 0;
+      border-radius: 8px;
+      width: 100%;
+      height: 260px;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    & > label{
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 0.8rem;
+      font-weight: bold;
+    }
+`
+
+export const TitleWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin-bottom: 3rem;
+
+  & > img {
+    position: absolute;
+    top: -90px;
+    right: -115px;
+    width: 186px;
+    height: auto;
+    animation: ${fadeInUp} 1s;
+  }
+`
+
+export const MessageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  & > img {
+    animation: ${fadeInUp} 1s;
+    position: absolute;
+    top: -20px;
+    left: -160px;
+    width: 150px;
+    height: auto;
+  }
+`
+
+export const ButtonSection = styled.section`
+  position: relative;
+  margin-top: 5.1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & > img {
+    position: absolute;
+    animation: ${fadeInUp} 1s;
+    z-index: 1;
+
+    &:nth-child(1) {
+      width: 170px;
+      height: auto;
+      top: -220px;
+      left: -280px;
+    }
+
+    &:nth-child(2) {
+      width: 436px;
+      height: auto;
+      top: -130px;
+      left: -300px;
+
+      @media (max-width: 459px) {
+        width: 336px;
+        top: -80px;
+        left: -200px;
+      }
+    }
+  }
+`
+
 export const SendButton = styled.button`
   ${GradientButton};
-  margin-top: 5.1rem;
+  z-index: 2;
 `

@@ -61,12 +61,13 @@ const HomeLayout = () => {
           <Styled.FirstLeftSection ref={firstSectionRef}>
             <Styled.StyledText isShow={showFirstTitle}>
               <Styled.FirstSectionTitle>
-                Grow your <em>games</em> with the <em>leading loyalty platform.</em>
+              Built to <em>accelerate growth</em> of your <em>gamer base</em> and <em>revenue</em>
+                {/* Grow your <em>games</em> with the <em>leading loyalty platform.</em> */}
               </Styled.FirstSectionTitle>
             </Styled.StyledText>
 
             <Styled.FirstSectionDescription>
-              Our solution is built to expand your game users and your revenue.
+            Our solution is designed to help you grow your gamer base and increase your revenue.
             </Styled.FirstSectionDescription>
             <Styled.LearnMoreButton onClick={() => navigate('/contact')}>
               Contact us
@@ -112,7 +113,7 @@ const HomeLayout = () => {
           'Our comprehensive loyalty platform\nprovides a powerful suite of retention\nfocused features, designed to increase\nuser engagement and satisfaction.\n ')}
           {renderSecondCardItem(
           '/Home_assets/chart-increasing_1f4c8 1.png', 
-          'Higher retention', 
+          'Increase Play Session', 
           'Drive longer play times and keep\nplayers coming back for more with our\nplatform’s new player incentives and\nretention-focused tools.\n ')}
       </Styled.SecondCardList>
       </div>
@@ -133,29 +134,31 @@ const HomeLayout = () => {
             <img src='/Home_assets/Gems.png' alt='gem_image'/>
           </Styled.ThirdImageSection>
 
-          <h5>CREATED FOR REAL GAME USERS</h5>
+          <h5>CREATED FOR REAL GAMERS</h5>
 
           <h1>Drive higher retention<br />with the loyalty platform</h1>
           <p>
           Our end-to-end loyalty platform provides an engaging and personalized gaming experience, with features designed to increase player satisfaction and retention. With our advanced analytics, we track user behavior and make data driven decisions to continually increase the growth of our user retention rates.
           </p>
         </Styled.ThirdLeftSection>
-        <div ref={thirdSectionRef}>
-          <Styled.StyledText isShow={showThirdCard}>
-            <Styled.ThirdRightSection>
-              <img src='/Home_assets/third_section.png' alt='third_section_image'/>
+        <Styled.ThirdRightRefWrapper ref={thirdSectionRef}>
+            <Styled.ThirdRightWrapper isShow={showThirdCard}>
+              <Styled.ThirdImageWrapper>
+                <img src='/Home_assets/third_section.jpg' alt='third_background_image'/>
+                <img src='/Home_assets/New icon 1.png' alt='third_game_icon_image'/>
+                <img src='/Home_assets/img_b_01.png' alt='third_character_image'/>
 
-              <Styled.ThirdPlayTimeCircle>
-                <h3>50%</h3>
+                <Styled.ThirdPlayTimeCircle>
+                <h3>+50%</h3>
                 <span>Play-time<br/>increases</span>
               </Styled.ThirdPlayTimeCircle>
               <Styled.ThirdRetentionCircle>
-                <h3>50%</h3>
+                <h3>+50%</h3>
                 <span>Higher<br/>retentions</span>
               </Styled.ThirdRetentionCircle>
-            </Styled.ThirdRightSection>
-          </Styled.StyledText>
-        </div>
+              </Styled.ThirdImageWrapper>
+            </Styled.ThirdRightWrapper>
+        </Styled.ThirdRightRefWrapper>
       </Styled.ThirdSectionWrapper>
     </Styled.ThirdSection>
   }
@@ -170,9 +173,8 @@ const HomeLayout = () => {
 
           <h5>MADE FOR MOBILE DEVELOPERS AND PUBLISHERS</h5>
 
-          <h1>We set out to build a premier global loyalty platform for mobile gamers</h1>
-          <p>
-          Reshape your mobile game with our loyalty platform’s comprehensive suite of loyalty-focused features, including trophy systems, reward management, and personalized incentives, all designed to increase user engagement and satisfaction on a global scale.</p>
+          <h1>Building a World Class Loyalty platform for mobile gamers</h1>
+          <p>Reshape your mobile games with our platform’s comprehensive suite of loyalty-focused features, including a trophy system, reward management, and personalized incentives, all designed to increase user engagement and satisfaction on a global scale.</p>
         </Styled.FourthLeftSection>
         <Styled.FourthRightSection>
           <Styled.GooglePlayButtonWrapper>
@@ -292,7 +294,7 @@ const HomeLayout = () => {
         </Styled.CompanyLogoWrapper> */}
 
         <Styled.SeventhFloatImageWrapper>
-            <img src='/Home_assets/img_e_02.png' alt='super_box_logo'/>
+            {/* <img src='/Home_assets/img_e_02.png' alt='super_box_logo'/> */}
             <img src='/Home_assets/img_e_01.png' alt='super_box_logo'/>
         </Styled.SeventhFloatImageWrapper>
       </Styled.SeventhSectionWrapper>

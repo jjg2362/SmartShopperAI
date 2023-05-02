@@ -156,7 +156,10 @@ export const FirstSectionDescription = styled.p`
   ${DescriptionStyle};
   color: #cccccc;
   margin-bottom: 3.3rem;
-  text-align: center;
+
+  @media (max-width: 769px) {
+    text-align: center;
+  }
 `
 
 export const LearnMoreButton = styled.button`
@@ -478,25 +481,75 @@ export const ThirdImageSection = styled.div`
     margin-bottom: 3.7rem;
   }
 `
-
-export const ThirdRightSection = styled.div`
-  position: relative;
-
-  & > img {
-    width: 736px;
-    height: auto;
-  }
+export const ThirdRightRefWrapper = styled.div`
+  width: 60%;
+  height: 100%;
 
   @media (max-width: 1220px) {
-    margin-top: 2rem;
-    align-self: center;
+    margin-bottom: 4rem;
+    width: 100%;
   }
+`;
 
-  @media (max-width: 769px) {
-    margin-top: 4rem;
+export const ThirdRightWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  ${(props) => props.isShow && css`
+    animation: ${fadeIn} 1s ease-in-out forwards;
+    `
+  };
 
-    & > img {
-      width: 100%;
+  @media (max-width: 1220px) {
+    justify-content: center
+  }
+`
+
+export const ThirdImageWrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    &:nth-child(1) {
+      width: 636px;
+      height: auto;
+
+      @media (max-width: 769px) {
+        width: 90%;
+      }
+    }
+    &:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      left: -70px;
+      transform: translateY(-50%);
+      width: 140px;
+      height: auto;
+
+      @media (max-width: 769px) {
+        width: 100px;
+        left: 0px;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 280px;
+      left: -120px;
+      width: 582px;
+      height: auto;
+
+      @media (max-width: 769px) {
+        width: 70%;
+        top: 60%;
+        left: -60px;
+      }
     }
   }
 `
@@ -514,7 +567,7 @@ export const ThirdPlayTimeCircle = styled.div`
   animation: ${ThirdPlayTimeCircleAnimation} 1s 1s infinite alternate;
   position: absolute;
   top: -50px;
-  left: 20%;
+  left: 40px;
   border-radius: 50%;
   width: 220px;
   height: 220px;
@@ -579,7 +632,7 @@ export const ThirdRetentionCircle = styled.div`
   animation: ${ThirdRetentionCircleAnimation} 1s 1s infinite alternate;
   position: absolute;
   top: 40px;
-  right: -10px;
+  right: -40px;
   border-radius: 50%;
   width: 220px;
   height: 220px;
@@ -1173,19 +1226,11 @@ export const CompanyLogoWrapper = styled.div`
 `
 
 export const SeventhFloatImageWrapper = styled.div`
+  position: absolute;
+  bottom: -280px;
     & > img{
-      position: absolute;
-
-      &:nth-child(1){
-        bottom: 60px;
-        left: 140px;
-        width: 203px;
-      }
-      &:nth-child(2){
-        bottom: -280px;
-        left: 0;
-        width: 526px;
-      } 
+      width: 526px;
+      height: auto;
     }
 
   @media (max-width: 1220px) {
@@ -1217,6 +1262,7 @@ export const EighthSectionWrapper = styled.div`
     ${TitleStyle};
     margin-top: 30.6rem;
     color: #fff;
+    text-align: center;
   }
 
   & > h5{

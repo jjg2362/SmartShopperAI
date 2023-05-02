@@ -162,7 +162,6 @@ export const MissionBackground = styled.div`
   background-image: url('/About_assets/Group 4691.png');
   background-size: cover;
   background-position-x: center;
-  background-position-y: center;
   background-repeat: no-repeat;
   opacity: 0.5;
   z-index: 1;

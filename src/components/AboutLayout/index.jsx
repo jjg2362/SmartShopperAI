@@ -8,50 +8,50 @@ const MemberList = [
   {
     id: 1,
     name: 'David',
-    description: 'Love playing Brawl stars.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: 'I have a passion in mobile game industry and worked in this industry for 15 years, with a particular interest in Brawl Stars and Idle Genre games.',
+    imgUrl: '/About_assets/David.png'
   },
   {
     id: 2,
     name: 'Kevin',
-    description: 'I firmly believe that Eldenring is the best game ever made. Call me Eldenloard :)',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: "Gaming isn't just a hobby, it's a passion that fuels my competitive spirit and pushes me to constantly improve.",
+    imgUrl: '/About_assets/Kev.png'
   },
   {
     id: 3,
     name: 'MC',
     description: 'Born to play games.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    imgUrl: '/About_assets/MC.png'
   },
   {
     id: 4,
     name: 'Jenny',
-    description: 'Born to play games.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: 'My love for Sudoku will continue even after I succeed.',
+    imgUrl: '/About_assets/Jenny.png'
   },
   {
     id: 5,
     name: 'Won',
-    description: 'Born to play games.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: 'Embracing the grind to achieve success.',
+    imgUrl: '/About_assets/Won.png'
   },
   {
     id: 6,
     name: 'Jin',
-    description: 'Love playing Brawl stars.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: 'i did it my way.',
+    imgUrl: '/About_assets/Jin.png'
   },
   {
     id: 7,
     name: 'Hannah',
-    description: 'Love playing Brawl stars.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: 'Gaming is my way of life, where I explore new worlds.',
+    imgUrl: '/About_assets/Hannah.png'
   },
   {
     id: 8,
     name: 'Jinu',
-    description: 'Love playing Brawl stars.',
-    imgUrl: '/About_assets/profile_ex01.png'
+    description: "I don't just play games, I immerse myself in epic adventures and become the hero of my own story.",
+    imgUrl: '/About_assets/Jinu.png'
   },
 ]
 
