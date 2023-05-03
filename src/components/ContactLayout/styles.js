@@ -24,13 +24,51 @@ export const CloseButton = styled.button`
 
   & > svg {
     font-size: 4rem;
+    color: #fff;
   }
 `;
 
 export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
   box-sizing: border-box;
+  padding: 7rem 5.3rem;
+  background-color: #fff;
+
+  max-width: 600px;
+
+  & > h1{
+    color: #171717;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 3.2rem;
+    line-height: 1.5;
+  }
+
+  & > p{
+    color: #171717;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  & > button {
+    margin-top: 6.7rem;;
+    padding: 1.2rem 4.6rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 459px) {
+    padding: 2rem 1rem;
+    max-width: auto;
+  }
 `;
 
 export const ModalFooter = styled.div`

@@ -20,7 +20,7 @@ const MemberList = [
   {
     id: 3,
     name: 'MC',
-    description: 'Born to play games.',
+    description: 'Born to play.',
     imgUrl: '/About_assets/MC.png'
   },
   {

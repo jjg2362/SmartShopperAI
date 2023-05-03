@@ -9,19 +9,34 @@ Modal.setAppElement('#root');
 
 const ContactLayout = () => {
   const [mailTitle, setMailTitle] = useState('');
-  const [mailAddress, setMailAddress] = useState('');
+  const [userName, setUserName] = useState('');
   const [mailDescription, setMailDescription] = useState('');
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
 
   const onSendMessage = (e) => {
     e.preventDefault();
-    
-    if(!mailTitle ){
-      setIsOpenModal(true);
+
+    if(!mailTitle){
+      setAlertMessage('Please fill in the title');
+      return;
     }
+    if(!userName){
+      setAlertMessage('Please fill in the name');
+      return;
+    }
+    if(!mailDescription){
+      setAlertMessage('Please fill in the description');
+      return;
+    }
+
     console.log(mailTitle);
-    console.log(mailAddress);
+    console.log(userName);
     console.log(mailDescription);
+
+    const mailData = `mailto:marketing@luckmon.com?Subject=${mailTitle}&cc=${userName}&body=${mailDescription}`
+    window.location.href = mailData;
+    setIsOpenModal(true);
   }
 
   return <>
@@ -41,8 +56,8 @@ const ContactLayout = () => {
 
       <Styled.FormSection>
         <form>
-          <label>Email</label>
-          <input type="email" placeholder="Enter your Email" value={mailAddress} onChange={(e) => setMailAddress(e.target.value)}/>
+          <label>Name</label>
+          <input type="email" placeholder="Enter your Email" value={userName} onChange={(e) => setUserName(e.target.value)}/>
         </form>
 
         <Styled.TitleWrapper>
@@ -77,13 +92,36 @@ const ContactLayout = () => {
     <Footer />
   </Styled.Container>
 
-  {/* <Styled.NeoModal
+  <Styled.NeoModal
       isOpen={isOpenModal}
       onRequestClose={() => setIsOpenModal(false)}
       closeTimeoutMS={300}
     >
-      아아아
-    </Styled.NeoModal> */}
+      <Styled.ModalContent>
+        <h1>Thanks for contacting Luckmon.</h1>
+
+        <p>One of our team members will be in touch with you shortly to discuss how we can assist you with your needs.</p>
+
+        <button onClick={() => setIsOpenModal(false)}>
+          Okay
+        </button>
+      </Styled.ModalContent>
+    </Styled.NeoModal>
+
+    <Styled.NeoModal
+      isOpen={!!alertMessage}
+      onRequestClose={() => setAlertMessage('')}
+      closeTimeoutMS={300}
+    >
+      <Styled.ModalContent>
+        <h1>Alert</h1>
+        
+        <p>{alertMessage}</p>
+        <button onClick={() => setAlertMessage('')}>
+          Okay
+        </button>
+      </Styled.ModalContent>
+    </Styled.NeoModal>
   </>
 }
 

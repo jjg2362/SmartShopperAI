@@ -8,8 +8,6 @@ const SideBar = () => {
   const segments = pathname.split('/');
 
   return <Styled.Container>
-    <Styled.Title>Luckmon</Styled.Title>
-
     <Styled.List>
       <li>
         <Styled.TermButton isActive={segments[segments.length - 1] === 'terms'} onClick={() => navigate('/legal/terms')}>

@@ -16,7 +16,7 @@ const Footer = () => {
             Terms of service
           </button>
           <button onClick={() => navigate("/legal/privacy")}>
-            Private Policy
+            Privacy Policy
           </button>
         </Styled.FooterLeftWrapper>
 

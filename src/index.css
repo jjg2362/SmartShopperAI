@@ -1,0 +1,19 @@
+/* 모달 */
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 1001;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content{
+  outline: none;
+}
