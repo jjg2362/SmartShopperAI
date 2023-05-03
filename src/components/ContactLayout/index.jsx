@@ -17,12 +17,12 @@ const ContactLayout = () => {
   const onSendMessage = (e) => {
     e.preventDefault();
 
-    if(!mailTitle){
-      setAlertMessage('Please fill in the title');
-      return;
-    }
     if(!userName){
       setAlertMessage('Please fill in the name');
+      return;
+    }
+    if(!mailTitle){
+      setAlertMessage('Please fill in the title');
       return;
     }
     if(!mailDescription){
@@ -57,7 +57,7 @@ const ContactLayout = () => {
       <Styled.FormSection>
         <form>
           <label>Name</label>
-          <input type="email" placeholder="Enter your Email" value={userName} onChange={(e) => setUserName(e.target.value)}/>
+          <input type="email" placeholder="Enter your Name" value={userName} onChange={(e) => setUserName(e.target.value)}/>
         </form>
 
         <Styled.TitleWrapper>
