@@ -33,6 +33,9 @@ const Footer = () => {
           <button onClick={() => window.open('https://www.facebook.com/luckmongames', "_blank")}>
             <img src="/Home_assets/Group 369.png" alt="facebook_icon" />
           </button>
+          <button onClick={() => window.open('https://www.youtube.com/@luckmongames', "_blank")}>
+            <img src="/Home_assets/Group 372.png" alt="youtube_icon" />
+          </button>
           <button onClick={() => window.open('https://medium.com/@luckmon', "_blank")}>
             <img src="/Home_assets/Group 370.png" alt="medium_icon" />
           </button>

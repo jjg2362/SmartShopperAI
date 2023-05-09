@@ -897,19 +897,23 @@ export const FifthCountryWrapper = styled.div`
 
   @media (max-width: 1220px) {
     position: absolute;
-    bottom: 380px;
-    left: 40px;
+    top: 220px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;    
-  }
+    align-items: flex-start; 
 
-  @media (max-width: 459px) {
     & > img{
       margin-bottom: 1rem;
       position: static;
+    }   
+  }
+
+  @media (max-width: 769px) {
+    top: 200px;
+
+    & > img{
       height: 25px;
-    }
+    }   
   }
 `
 

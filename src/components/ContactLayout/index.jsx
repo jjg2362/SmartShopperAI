@@ -30,10 +30,6 @@ const ContactLayout = () => {
       return;
     }
 
-    console.log(mailTitle);
-    console.log(userName);
-    console.log(mailDescription);
-
     const mailData = `mailto:marketing@luckmon.com?Subject=${mailTitle}&cc=${userName}&body=${mailDescription}`
     window.location.href = mailData;
     setIsOpenModal(true);
