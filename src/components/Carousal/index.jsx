@@ -46,6 +46,9 @@ const Carousal = () => {
         <Styled.Item>
           <img src='/Home_assets/logoF_01.png' alt='neicon_logo'/>
         </Styled.Item>
+        <Styled.Item>
+          <img src='/Home_assets/logoE_01.png' alt='neicon_logo'/>
+        </Styled.Item>
       </Styled.CustomSlider>
     </Styled.Container>
   );

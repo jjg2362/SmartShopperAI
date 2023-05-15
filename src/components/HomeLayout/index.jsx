@@ -275,14 +275,14 @@ const HomeLayout = () => {
     return <Styled.SeventhSection>
       <Styled.SeventhSectionWrapper>
         <Styled.AlohaFactoryWrapper>
-          <img src='/Home_assets/logoE_02.png' alt='aloha_factory_logo'/>
+          <img src='/Home_assets/Group 4712.png' alt='super_colony_logo'/>
 
           <h2>“Luckmon traffic is outperforming other performance marketing<br />
           channels on Android with 30% better retention, our main<br />
           performance KPI.”</h2>
 
           <h6>Madison Steele</h6>
-          <span>Head of Monetization and User Acquisition, Aloha Factory</span>
+          <span>Head of Monetization and User Acquisition, Super Colony</span>
         </Styled.AlohaFactoryWrapper>
 
         <Carousal />
