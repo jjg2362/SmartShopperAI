@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 import Modal from 'react-modal';
 
 export const ModalHeader = styled.div`
@@ -39,7 +39,7 @@ export const ModalContent = styled.div`
 
   max-width: 600px;
 
-  & > h1{
+  & > h1 {
     color: #171717;
     text-align: center;
     font-weight: bold;
@@ -48,7 +48,7 @@ export const ModalContent = styled.div`
     line-height: 1.5;
   }
 
-  & > p{
+  & > p {
     color: #171717;
     text-align: center;
     font-size: 1.8rem;
@@ -56,7 +56,7 @@ export const ModalContent = styled.div`
   }
 
   & > button {
-    margin-top: 6.7rem;;
+    margin-top: 6.7rem;
     padding: 1.2rem 4.6rem;
     background-color: #000;
     color: #fff;
@@ -86,11 +86,15 @@ const fadeInUp = keyframes`
       opacity: 1;
       transform: translateZ(0);
   }
-`
+`;
 
 const GradientButton = css`
   cursor: pointer;
-  background: linear-gradient(to left, #caf423, #00cabe); /* 그라데이션 배경색 설정 */
+  background: linear-gradient(
+    to left,
+    #caf423,
+    #00cabe
+  ); /* 그라데이션 배경색 설정 */
   border: none;
   font-size: 2.4rem;
   color: #fff;
@@ -101,18 +105,18 @@ const GradientButton = css`
   @media (max-width: 459px) {
     font-size: 2rem;
   }
-`
+`;
 
 const SubTitleStyle = css`
   font-size: 1.6rem;
   color: #5ccc5c;
   font-weight: bold;
   text-align: center;
-  
+
   @media (max-width: 459px) {
     font-size: 1.4rem;
   }
-`
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -144,7 +148,7 @@ export const Content = styled.div`
     padding-right: 4rem;
     box-sizing: border-box;
   }
-`
+`;
 
 export const TopWrapper = styled.div`
   width: 100%;
@@ -172,12 +176,12 @@ export const TopWrapper = styled.div`
       font-size: 4rem;
     }
   }
-`
+`;
 
 export const TopImageWrapper = styled.div`
   position: relative;
 
-  & > img{
+  & > img {
     position: absolute;
     z-index: 1;
     &:nth-child(1) {
@@ -202,7 +206,7 @@ export const TopImageWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 export const FormSection = styled.section`
   width: 100%;
@@ -236,7 +240,7 @@ export const FormSection = styled.section`
       box-sizing: border-box;
     }
 
-    & > label{
+    & > label {
       font-size: 1.6rem;
       color: #fff;
       margin-bottom: 0.8rem;
@@ -247,40 +251,40 @@ export const FormSection = styled.section`
       margin-bottom: 0;
     }
   }
-`
+`;
 
 export const Form = styled.form`
- width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-    & > input {
-      outline: none;
-      border: 0;
-      border-radius: 8px;
-      width: 100%;
-      height: 40px;
-      padding: 0 1rem;
-      box-sizing: border-box;
-    }
+  & > input {
+    outline: none;
+    border: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 
-    & > textarea {
-      outline: none;
-      border: 0;
-      border-radius: 8px;
-      width: 100%;
-      height: 260px;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
+  & > textarea {
+    outline: none;
+    border: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 260px;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
 
-    & > label{
-      font-size: 1.6rem;
-      color: #fff;
-      margin-bottom: 0.8rem;
-      font-weight: bold;
-    }
-`
+  & > label {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+`;
 
 export const TitleWrapper = styled.div`
   position: relative;
@@ -298,7 +302,7 @@ export const TitleWrapper = styled.div`
     height: auto;
     animation: ${fadeInUp} 1s;
   }
-`
+`;
 
 export const MessageWrapper = styled.div`
   position: relative;
@@ -315,7 +319,7 @@ export const MessageWrapper = styled.div`
     width: 150px;
     height: auto;
   }
-`
+`;
 
 export const ButtonSection = styled.section`
   position: relative;
@@ -349,9 +353,9 @@ export const ButtonSection = styled.section`
       }
     }
   }
-`
+`;
 
 export const SendButton = styled.button`
   ${GradientButton};
   z-index: 2;
-`
+`;

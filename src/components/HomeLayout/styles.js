@@ -1,4 +1,4 @@
-import styled, {css, keyframes} from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
 const TitleStyle = css`
   font-size: 4.2rem;
@@ -8,7 +8,7 @@ const TitleStyle = css`
   @media (max-width: 459px) {
     font-size: 3.4rem;
   }
-`
+`;
 
 const DescriptionStyle = css`
   font-size: 2.2rem;
@@ -17,11 +17,15 @@ const DescriptionStyle = css`
   @media (max-width: 459px) {
     font-size: 1.8rem;
   }
-`
+`;
 
 const GradientButton = css`
   cursor: pointer;
-  background: linear-gradient(to left, #caf423, #00cabe); /* 그라데이션 배경색 설정 */
+  background: linear-gradient(
+    to left,
+    #caf423,
+    #00cabe
+  ); /* 그라데이션 배경색 설정 */
   border: none;
   font-size: 2.4rem;
   color: #fff;
@@ -32,19 +36,17 @@ const GradientButton = css`
   @media (max-width: 459px) {
     font-size: 2rem;
   }
-`
+`;
 
 const SubTitleStyle = css`
   font-size: 1.6rem;
   color: #5ccc5c;
   font-weight: bold;
-  
-  
+
   @media (max-width: 459px) {
     font-size: 1.4rem;
   }
-`
-
+`;
 
 const fadeIn = keyframes`
   from {
@@ -60,10 +62,11 @@ const fadeIn = keyframes`
 export const StyledText = styled.div`
   opacity: 0;
   transform: translateY(20px);
-  ${(props) => props.isShow && css`
-    animation: ${fadeIn} 1s ease-in-out forwards;
-    `
-  };
+  ${(props) =>
+    props.isShow &&
+    css`
+      animation: ${fadeIn} 1s ease-in-out forwards;
+    `};
 `;
 
 export const Container = styled.div`
@@ -82,7 +85,7 @@ export const Content = styled.main`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-`
+`;
 
 export const FirstSection = styled.section`
   width: 100%;
@@ -96,7 +99,7 @@ export const FirstSection = styled.section`
     padding: 0 4rem;
     box-sizing: border-box;
   }
-`
+`;
 
 export const FirstSectionWrapper = styled.div`
   max-width: 1220px;
@@ -114,7 +117,7 @@ export const FirstSectionWrapper = styled.div`
     flex-direction: column-reverse;
     padding: 10rem 0 7rem 0;
   }
-`
+`;
 
 export const FirstLeftSection = styled.div`
   display: flex;
@@ -128,7 +131,7 @@ export const FirstLeftSection = styled.div`
   @media (max-width: 769px) {
     align-items: center;
   }
-`
+`;
 
 export const FirstSectionTitle = styled.h1`
   font-size: 5.8rem;
@@ -150,7 +153,7 @@ export const FirstSectionTitle = styled.h1`
   @media (max-width: 459px) {
     font-size: 3.4rem;
   }
-`
+`;
 
 export const FirstSectionDescription = styled.p`
   ${DescriptionStyle};
@@ -160,7 +163,7 @@ export const FirstSectionDescription = styled.p`
   @media (max-width: 769px) {
     text-align: center;
   }
-`
+`;
 
 export const LearnMoreButton = styled.button`
   ${GradientButton};
@@ -185,7 +188,6 @@ export const FirstRightSection = styled.div`
     height: 647px;
     object-fit: contain;
   }
- 
 
   @media (max-width: 1220px) {
     margin-bottom: 6rem;
@@ -199,7 +201,7 @@ export const FirstRightSection = styled.div`
       height: auto;
     }
   }
-`
+`;
 
 export const SecondSection = styled.section`
   width: 100%;
@@ -215,7 +217,7 @@ export const SecondSection = styled.section`
     padding: 8rem 4rem;
     box-sizing: border-box;
   }
-`
+`;
 
 export const SecondSectionWrapper = styled.div`
   max-width: 1220px;
@@ -239,12 +241,12 @@ export const SecondSectionWrapper = styled.div`
     color: #ccc;
     margin-bottom: 8.1rem;
     text-align: center;
-  }  
+  }
 
   @media (max-width: 1220px) {
     max-width: auto;
   }
-`
+`;
 
 export const SecondCardList = styled.ul`
   width: 100%;
@@ -255,7 +257,9 @@ export const SecondCardList = styled.ul`
     transform: translateY(20px);
   }
 
-  ${(props) => props.isShow && css`
+  ${(props) =>
+    props.isShow &&
+    css`
       & > li {
         &:nth-child(1) {
           animation: ${fadeIn} 0.6s ease-in-out forwards;
@@ -270,15 +274,15 @@ export const SecondCardList = styled.ul`
           animation: ${fadeIn} 0.6s ease-in-out forwards;
           animation-delay: 0.6s;
         }
-    } 
-  `}
+      }
+    `}
 
   @media (max-width: 459px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
 export const SecondCardItem = styled.li`
   width: 33.3%;
@@ -304,7 +308,7 @@ export const SecondCardItem = styled.li`
       margin-bottom: 0;
     }
   }
-`
+`;
 
 export const SecondCardItemWrapper = styled.div`
   height: 100%;
@@ -321,7 +325,7 @@ export const SecondCardItemWrapper = styled.div`
     margin-bottom: 1.6rem;
   }
 
-  & > h1{
+  & > h1 {
     font-size: 2.2rem;
     color: #fff;
     margin-bottom: 2.4rem;
@@ -329,7 +333,7 @@ export const SecondCardItemWrapper = styled.div`
     font-weight: bold;
   }
 
-  & > p{
+  & > p {
     text-align: center;
     font-size: 2rem;
     color: #ccc;
@@ -346,16 +350,16 @@ export const SecondCardItemWrapper = styled.div`
   @media (max-width: 769px) {
     padding: 3rem 1.2rem;
 
-    & > img{
+    & > img {
       width: 40px;
     }
 
-    & > h1{
+    & > h1 {
       font-size: 1.8rem;
       margin-bottom: 2rem;
     }
 
-    & > p{
+    & > p {
       font-size: 1.6rem;
     }
   }
@@ -363,20 +367,20 @@ export const SecondCardItemWrapper = styled.div`
   @media (max-width: 459px) {
     padding: 3rem 1.2rem;
 
-    & > img{
+    & > img {
       width: 58px;
     }
 
-    & > h1{
+    & > h1 {
       font-size: 2.2rem;
       margin-bottom: 2.4rem;
     }
 
-    & > p{
+    & > p {
       font-size: 2rem;
     }
   }
-`
+`;
 
 export const ContactUsWrapper = styled.div`
   display: flex;
@@ -384,27 +388,27 @@ export const ContactUsWrapper = styled.div`
   align-items: center;
   margin-top: 5rem;
 
-  & > span{
+  & > span {
     font-size: 1.6rem;
     color: #ccc;
     margin-right: 0.8rem;
     text-align: center;
   }
 
-  & > button{
+  & > button {
     font-size: 1.6rem;
     font-weight: bold;
     color: #5ccc5c;
   }
 
   @media (max-width: 769px) {
-      flex-direction: column;
+    flex-direction: column;
 
-    & > button{
+    & > button {
       margin-top: 1.2rem;
     }
   }
-`
+`;
 
 export const ThirdSection = styled.section`
   width: 100%;
@@ -419,7 +423,7 @@ export const ThirdSection = styled.section`
     height: auto;
     box-sizing: border-box;
   }
-`
+`;
 
 export const ThirdSectionWrapper = styled.div`
   max-width: 1220px;
@@ -433,14 +437,14 @@ export const ThirdSectionWrapper = styled.div`
     box-sizing: border-box;
     flex-direction: column;
   }
-`
+`;
 
 export const ThirdLeftSection = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
 
-  & > h5{
+  & > h5 {
     ${SubTitleStyle}
     margin-bottom: 3.2rem;
   }
@@ -460,19 +464,19 @@ export const ThirdLeftSection = styled.div`
   @media (max-width: 1220px) {
     width: 100%;
   }
-`
+`;
 
 export const ThirdImageSection = styled.div`
   display: flex;
   flex-direction: column;
-  
-  & > img{
+
+  & > img {
     width: 65px;
     height: auto;
     padding-bottom: 3.7rem;
   }
 
-  &:after{
+  &:after {
     content: '';
     display: block;
     width: 86px;
@@ -480,7 +484,7 @@ export const ThirdImageSection = styled.div`
     background: #ccc;
     margin-bottom: 3.7rem;
   }
-`
+`;
 export const ThirdRightRefWrapper = styled.div`
   width: 60%;
   height: 100%;
@@ -500,15 +504,16 @@ export const ThirdRightWrapper = styled.div`
   align-items: center;
   opacity: 0;
   transform: translateY(20px);
-  ${(props) => props.isShow && css`
-    animation: ${fadeIn} 1s ease-in-out forwards;
-    `
-  };
+  ${(props) =>
+    props.isShow &&
+    css`
+      animation: ${fadeIn} 1s ease-in-out forwards;
+    `};
 
   @media (max-width: 1220px) {
-    justify-content: center
+    justify-content: center;
   }
-`
+`;
 
 export const ThirdImageWrapper = styled.div`
   position: relative;
@@ -552,7 +557,7 @@ export const ThirdImageWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 const ThirdPlayTimeCircleAnimation = keyframes`
   0% {
@@ -561,7 +566,7 @@ const ThirdPlayTimeCircleAnimation = keyframes`
   100% {
     top: -30px;
   }
-`
+`;
 
 export const ThirdPlayTimeCircle = styled.div`
   animation: ${ThirdPlayTimeCircleAnimation} 1s 1s infinite alternate;
@@ -584,7 +589,7 @@ export const ThirdPlayTimeCircle = styled.div`
     margin-bottom: 0.4rem;
   }
 
-  & > span{
+  & > span {
     font-size: 2.2rem;
     color: #fff;
     font-weight: bold;
@@ -594,30 +599,30 @@ export const ThirdPlayTimeCircle = styled.div`
 
   @media (max-width: 769px) {
     width: 160px;
-    height: 160px; 
+    height: 160px;
 
     & > h3 {
       font-size: 3rem;
     }
 
-    & > span{
+    & > span {
       font-size: 1.6rem;
     }
   }
 
   @media (max-width: 459px) {
     width: 120px;
-    height: 120px; 
+    height: 120px;
 
     & > h3 {
       font-size: 2.4rem;
     }
 
-    & > span{
+    & > span {
       font-size: 1.4rem;
     }
   }
-`
+`;
 
 const ThirdRetentionCircleAnimation = keyframes`
   0% {
@@ -626,7 +631,7 @@ const ThirdRetentionCircleAnimation = keyframes`
   100% {
     top: 60px;
   }
-`
+`;
 
 export const ThirdRetentionCircle = styled.div`
   animation: ${ThirdRetentionCircleAnimation} 1s 1s infinite alternate;
@@ -649,7 +654,7 @@ export const ThirdRetentionCircle = styled.div`
     margin-bottom: 0.4rem;
   }
 
-  & > span{
+  & > span {
     font-size: 2.2rem;
     color: #fff;
     font-weight: bold;
@@ -659,30 +664,30 @@ export const ThirdRetentionCircle = styled.div`
 
   @media (max-width: 769px) {
     width: 160px;
-    height: 160px; 
+    height: 160px;
 
     & > h3 {
       font-size: 3rem;
     }
 
-    & > span{
+    & > span {
       font-size: 1.6rem;
     }
   }
 
   @media (max-width: 459px) {
     width: 120px;
-    height: 120px; 
+    height: 120px;
 
     & > h3 {
       font-size: 2.4rem;
     }
 
-    & > span{
+    & > span {
       font-size: 1.4rem;
     }
   }
-`
+`;
 
 export const FourthSection = styled.section`
   width: 100%;
@@ -694,7 +699,7 @@ export const FourthSection = styled.section`
   @media (max-width: 1220px) {
     height: auto;
   }
-`
+`;
 
 export const FourthSectionWrapper = styled.div`
   max-width: 1220px;
@@ -710,7 +715,7 @@ export const FourthSectionWrapper = styled.div`
     box-sizing: border-box;
     flex-direction: column;
   }
-`
+`;
 
 export const FourthLeftSection = styled.div`
   display: flex;
@@ -719,7 +724,7 @@ export const FourthLeftSection = styled.div`
   width: 48%;
   height: 100%;
 
-  & > h5{
+  & > h5 {
     ${SubTitleStyle};
     margin-bottom: 3.2rem;
   }
@@ -746,7 +751,7 @@ export const FourthLeftSection = styled.div`
   @media (max-width: 1220px) {
     width: 100%;
   }
-`
+`;
 
 export const FourthRightSection = styled.div`
   position: relative;
@@ -759,7 +764,7 @@ export const FourthRightSection = styled.div`
   & > img {
     align-self: flex-end;
     width: 600px;
-    height: auto;    
+    height: auto;
   }
 
   @media (max-width: 1220px) {
@@ -776,7 +781,7 @@ export const FourthRightSection = styled.div`
       width: 80%;
     }
   }
-`
+`;
 
 export const GooglePlayButtonWrapper = styled.div`
   display: flex;
@@ -793,7 +798,7 @@ export const GooglePlayButtonWrapper = styled.div`
     }
   }
 
-  img{
+  img {
     &:nth-child(1) {
       width: auto;
       height: 80px;
@@ -812,7 +817,7 @@ export const GooglePlayButtonWrapper = styled.div`
   }
 
   @media (max-width: 459px) {
-    img{
+    img {
       &:nth-child(1) {
         width: auto;
         height: 60px;
@@ -824,7 +829,7 @@ export const GooglePlayButtonWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 export const FifthSection = styled.section`
   width: 100%;
@@ -836,7 +841,7 @@ export const FifthSection = styled.section`
   @media (max-width: 1220px) {
     height: auto;
   }
-`
+`;
 
 export const FifthSectionWrapper = styled.div`
   position: relative;
@@ -851,10 +856,9 @@ export const FifthSectionWrapper = styled.div`
     height: auto;
     padding: 2rem 4rem;
   }
-`
+`;
 
-export const FifthImageSection = styled.div`
-`
+export const FifthImageSection = styled.div``;
 
 export const FifthImageBackground = styled.div`
   position: absolute;
@@ -862,14 +866,14 @@ export const FifthImageBackground = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
- & > img{
+  & > img {
     width: 1198px;
     height: auto;
   }
-`
+`;
 
 export const FifthCountryWrapper = styled.div`
-  & > img{
+  & > img {
     position: absolute;
     width: auto;
     height: 30px;
@@ -900,22 +904,22 @@ export const FifthCountryWrapper = styled.div`
     top: 220px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 
-    & > img{
+    & > img {
       margin-bottom: 1rem;
       position: static;
-    }   
+    }
   }
 
   @media (max-width: 769px) {
     top: 200px;
 
-    & > img{
+    & > img {
       height: 25px;
-    }   
+    }
   }
-`
+`;
 
 export const FifthTitleWrapper = styled.div`
   position: flex;
@@ -924,11 +928,11 @@ export const FifthTitleWrapper = styled.div`
   padding-bottom: 22.1rem;
   box-sizing: border-box;
 
-  & > h5{
+  & > h5 {
     ${SubTitleStyle};
   }
 
-  & > h1{
+  & > h1 {
     ${TitleStyle};
     color: #fff;
   }
@@ -937,14 +941,14 @@ export const FifthTitleWrapper = styled.div`
     width: 100%;
     left: 40px;
   }
-`
+`;
 
 export const FifthFloatImageWrapper = styled.div`
   position: absolute;
   bottom: -140px;
   right: 0;
 
-  & > img{
+  & > img {
     width: 527px;
     height: auto;
   }
@@ -952,19 +956,23 @@ export const FifthFloatImageWrapper = styled.div`
   @media (max-width: 1220px) {
     display: none;
   }
-`
+`;
 
 export const SixthSection = styled.section`
   width: 100%;
   height: 760px;
-  background: linear-gradient(to bottom, #ebeef4, #eaebf1); /* 그라데이션 배경색 설정 */
+  background: linear-gradient(
+    to bottom,
+    #ebeef4,
+    #eaebf1
+  ); /* 그라데이션 배경색 설정 */
   display: flex;
   justify-content: center;
 
   @media (max-width: 1220px) {
     height: auto;
   }
-`
+`;
 
 export const SixthSectionWrapper = styled.div`
   max-width: 1220px;
@@ -980,22 +988,22 @@ export const SixthSectionWrapper = styled.div`
     padding: 8rem 4rem;
     box-sizing: border-box;
   }
-`
+`;
 
 export const SixthTitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  & > h5{
+  & > h5 {
     ${SubTitleStyle};
     margin-bottom: 3.2rem;
   }
 
-  & > h1{
+  & > h1 {
     ${TitleStyle};
     color: #000;
   }
-`
+`;
 
 export const LuckmonResourceCardList = styled.ul`
   display: flex;
@@ -1010,7 +1018,7 @@ export const LuckmonResourceCardList = styled.ul`
   @media (max-width: 459px) {
     justify-content: center;
   }
-`
+`;
 
 export const LuckmonResourceCardImageWrapper1 = styled.div`
   display: flex;
@@ -1020,11 +1028,11 @@ export const LuckmonResourceCardImageWrapper1 = styled.div`
   height: 50%;
   background-color: #cfcfcf;
 
-  & > img{
+  & > img {
     max-width: 100%;
     object-fit: cover;
   }
-`
+`;
 
 export const LuckmonResourceCardImageWrapper2 = styled.div`
   display: flex;
@@ -1034,11 +1042,11 @@ export const LuckmonResourceCardImageWrapper2 = styled.div`
   height: 50%;
   background-color: #141619;
 
-  & > img{
+  & > img {
     max-width: 100%;
     object-fit: cover;
   }
-`
+`;
 
 export const LuckmonResourceCardTitleWrapper = styled.div`
   background-color: #fff;
@@ -1050,32 +1058,32 @@ export const LuckmonResourceCardTitleWrapper = styled.div`
   height: 50%;
   width: 100%;
 
-  & > h3{
+  & > h3 {
     font-size: 1.6rem;
     color: #749c9a;
     margin-bottom: 0.6rem;
     font-weight: bold;
   }
 
-      & > p {
-        text-align: left;
-        font-size: 1.8rem;
-        color: #000;
-        font-weight: bold;
-        line-height: 1.5;
-        word-break: keep-all;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        white-space: pre-wrap;
-      }
+  & > p {
+    text-align: left;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: bold;
+    line-height: 1.5;
+    word-break: keep-all;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    white-space: pre-wrap;
+  }
 
   @media (max-width: 459px) {
     padding: 1.7rem 2rem;
   }
-`
+`;
 
 export const LuckmonResourceCard = styled.li`
   width: 24%;
@@ -1094,7 +1102,7 @@ export const LuckmonResourceCard = styled.li`
     width: 100%;
     height: 100%;
 
-    & > img{
+    & > img {
       width: 100%;
       height: 50%;
       object-fit: cover;
@@ -1110,20 +1118,23 @@ export const LuckmonResourceCard = styled.li`
     width: 80%;
     height: 246px;
   }
-`
-
+`;
 
 export const SeventhSection = styled.section`
   width: 100%;
   height: 900px;
-  background: linear-gradient(to bottom, #1c2039, #0a1713); /* 그라데이션 배경색 설정 */
+  background: linear-gradient(
+    to bottom,
+    #1c2039,
+    #0a1713
+  ); /* 그라데이션 배경색 설정 */
   display: flex;
   justify-content: center;
 
   @media (max-width: 1220px) {
     height: auto;
   }
-`
+`;
 
 export const SeventhSectionWrapper = styled.div`
   max-width: 1220px;
@@ -1140,7 +1151,7 @@ export const SeventhSectionWrapper = styled.div`
     padding: 8rem 4rem 4rem 4rem;
     box-sizing: border-box;
   }
-`
+`;
 
 export const AlohaFactoryWrapper = styled.div`
   display: flex;
@@ -1148,12 +1159,12 @@ export const AlohaFactoryWrapper = styled.div`
   align-items: center;
   margin-top: 11.8rem;
 
-  & > img{
+  & > img {
     width: 212px;
     height: auto;
   }
 
-  & > h2{
+  & > h2 {
     margin-top: 4.6rem;
     text-align: center;
     font-size: 3rem;
@@ -1162,14 +1173,14 @@ export const AlohaFactoryWrapper = styled.div`
     line-height: 1.5;
   }
 
-  & > h6{
+  & > h6 {
     margin-top: 3.9rem;
     font-size: 1.8rem;
     color: #fff;
     font-weight: bold;
   }
 
-  & > span{
+  & > span {
     margin-top: 0.8rem;
     font-size: 1.8rem;
     color: #fff;
@@ -1181,19 +1192,19 @@ export const AlohaFactoryWrapper = styled.div`
   }
 
   @media (max-width: 469px) {
-    & > h2{
+    & > h2 {
       font-size: 2.4rem;
     }
 
-    & > h6{
+    & > h6 {
       font-size: 1.6rem;
     }
 
-    & > span{
+    & > span {
       font-size: 1.6rem;
     }
   }
-`
+`;
 
 export const CompanyLogoWrapper = styled.div`
   width: 100%;
@@ -1203,17 +1214,17 @@ export const CompanyLogoWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  & > img{
+  & > img {
     width: 170px;
     height: auto;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
 
   @media (max-width: 769px) {
-    & > img{
+    & > img {
       width: 100px;
     }
   }
@@ -1222,25 +1233,25 @@ export const CompanyLogoWrapper = styled.div`
     align-items: space-between;
     flex-wrap: wrap;
 
-    & > img{
+    & > img {
       width: 40%;
       margin-bottom: 1rem;
     }
   }
-`
+`;
 
 export const SeventhFloatImageWrapper = styled.div`
   position: absolute;
   bottom: -280px;
-    & > img{
-      width: 526px;
-      height: auto;
-    }
+  & > img {
+    width: 526px;
+    height: auto;
+  }
 
   @media (max-width: 1220px) {
     display: none;
   }
-`
+`;
 
 export const EighthSection = styled.section`
   width: 100%;
@@ -1252,7 +1263,7 @@ export const EighthSection = styled.section`
   @media (max-width: 1220px) {
     height: auto;
   }
-`
+`;
 
 export const EighthSectionWrapper = styled.div`
   max-width: 1220px;
@@ -1262,14 +1273,14 @@ export const EighthSectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  & > h1{
+  & > h1 {
     ${TitleStyle};
     margin-top: 30.6rem;
     color: #fff;
     text-align: center;
   }
 
-  & > h5{
+  & > h5 {
     ${DescriptionStyle};
     color: #ccc;
     margin-top: 2.3rem;
@@ -1283,8 +1294,8 @@ export const EighthSectionWrapper = styled.div`
     padding: 8rem 4rem;
     box-sizing: border-box;
 
-    & > h1{
+    & > h1 {
       margin-top: 0;
     }
   }
-`
+`;

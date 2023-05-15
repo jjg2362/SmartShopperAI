@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 import Slider from 'react-slick';
 
 export const Container = styled.div`
@@ -15,17 +15,17 @@ export const Container = styled.div`
   @media (max-width: 459px) {
     width: 360px;
   }
-`
+`;
 
 export const Item = styled.div`
   width: 100%;
 
-  & > img{
+  & > img {
     margin: 0 auto;
     width: 170px;
     height: auto;
   }
-`
+`;
 
 export const CustomSlider = styled(Slider)`
   width: 100%;
@@ -37,4 +37,4 @@ export const CustomSlider = styled(Slider)`
   }
   .slick-slide div {
   }
-`
+`;

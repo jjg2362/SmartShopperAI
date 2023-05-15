@@ -1,16 +1,15 @@
 import baseStyled from 'styled-components';
 
-const customMediaQuery = (maxWidth) =>
-  `@media (max-width: ${maxWidth}px)`;
+const customMediaQuery = (maxWidth) => `@media (max-width: ${maxWidth}px)`;
 
 const media = {
   desktop: customMediaQuery(1296),
   tablet: customMediaQuery(769),
-  phone: customMediaQuery(459),
+  phone: customMediaQuery(459)
 };
 
 const theme = {
-  media,
+  media
 };
 
 export const styled = baseStyled;

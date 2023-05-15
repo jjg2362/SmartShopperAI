@@ -19,13 +19,13 @@ export const Layout = styled.div`
   padding-bottom: 7rem;
   box-sizing: border-box;
   padding-top: 10rem;
-  
+
   @media (max-width: 769px) {
     flex-direction: column;
     max-width: auto;
     width: 100%;
   }
-`
+`;
 
 export const SideBarWrapper = styled.nav`
   flex: 0 0 270px;
@@ -33,19 +33,23 @@ export const SideBarWrapper = styled.nav`
   @media (max-width: 769px) {
     flex: 0 0 auto;
   }
-`
+`;
 
 export const Content = styled.article`
   flex: 1 1 auto;
   overflow-x: auto;
-  
-  *{
+
+  * {
     color: #fff;
     line-height: 1.6;
     font-size: 1.6rem;
   }
 
-  h2, h3, h4, h5, h6{
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.4rem;
@@ -57,7 +61,7 @@ export const Content = styled.article`
     margin-bottom: 1rem;
   }
 
-  a{
+  a {
     text-decoration: underline;
     font-weight: 500;
   }
@@ -100,8 +104,9 @@ export const Content = styled.article`
       font-weight: bold;
     }
 
-    th, td {
+    th,
+    td {
       border: 1px solid #fff;
     }
   }
-`
+`;

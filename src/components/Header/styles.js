@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.header`
   width: 100%;
@@ -16,15 +16,18 @@ export const HeaderBackground = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;  
+  z-index: 1;
   transition: all 0.3s ease;
 
-  ${(props) => props.isSticky ? css`
-    background-color: #000;
-    opacity: 0.8;
-  ` : css`
-    background-color: transparent;
-  `}
+  ${(props) =>
+    props.isSticky
+      ? css`
+          background-color: #000;
+          opacity: 0.8;
+        `
+      : css`
+          background-color: transparent;
+        `}
 `;
 
 export const HeaderWrapper = styled.div`
@@ -38,10 +41,10 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 100%;
 
-  @media (max-width : 1296px){
+  @media (max-width: 1296px) {
     justify-content: flex-end;
   }
-`
+`;
 
 export const Logo = styled.div`
   position: absolute;
@@ -52,32 +55,32 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width : 1296px){
+  @media (max-width: 1296px) {
     left: 20px;
   }
-`
+`;
 
 export const HeaderButtonList = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  & > li{
+  & > li {
     margin-right: 70px;
 
-    &:last-child{
+    &:last-child {
       margin-right: 20px;
     }
   }
 
-  @media (max-width : 769px){
+  @media (max-width: 769px) {
     display: none;
-    
-    & > li{
+
+    & > li {
       margin-right: 20px;
     }
   }
-`
+`;
 
 export const HamButton = styled.button`
   display: none;
@@ -89,7 +92,7 @@ export const HamButton = styled.button`
 
   span {
     display: inline-block;
-    transition: all .4s;
+    transition: all 0.4s;
     box-sizing: border-box;
     position: absolute;
     left: 0;
@@ -112,32 +115,34 @@ export const HamButton = styled.button`
     }
   }
 
-  ${props => props.isOpen && css`
-    span:nth-of-type(1) {
-      -webkit-transform: translateY(10px) rotate (-45deg);
-      transform: translateY(10px) rotate(-45deg);
-    }
+  ${(props) =>
+    props.isOpen &&
+    css`
+      span:nth-of-type(1) {
+        -webkit-transform: translateY(10px) rotate (-45deg);
+        transform: translateY(10px) rotate(-45deg);
+      }
 
-    span:nth-of-type(2) {
-      opacity: 0;
-    }
+      span:nth-of-type(2) {
+        opacity: 0;
+      }
 
-    span:nth-of-type(3) {
-      -webkit-transform: translateY(-10px) rotate(45deg);
-      transform: translateY(-10px) rotate(45deg);
-    }
-  `}
+      span:nth-of-type(3) {
+        -webkit-transform: translateY(-10px) rotate(45deg);
+        transform: translateY(-10px) rotate(45deg);
+      }
+    `}
 
-  @media (max-width : 769px){
+  @media (max-width : 769px) {
     display: block;
   }
-`
+`;
 
 export const SideBarWrapper = styled.aside`
   display: none;
   position: fixed;
-  top: 0; 
-  right: ${props => props.isOpen ? '0' : '-240px'};
+  top: 0;
+  right: ${(props) => (props.isOpen ? '0' : '-240px')};
   width: 240px;
   height: 100vh;
   background-color: #141619;
@@ -145,42 +150,42 @@ export const SideBarWrapper = styled.aside`
   padding: 12rem 3rem 0 3rem;
   box-sizing: border-box;
 
-  @media (max-width : 769px){
+  @media (max-width: 769px) {
     display: block;
   }
-`
+`;
 
 export const SidebarButtonList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
-  & > li{
+  & > li {
     margin-bottom: 4.2rem;
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
-`
+`;
 
 const HeaderButtonStyle = css`
   font-size: 1.8rem;
   font-weight: bold;
   transition: all 0.3s ease;
-  color: ${(props) => props.isActive ? '#5ccc5c' : '#fff'};
+  color: ${(props) => (props.isActive ? '#5ccc5c' : '#fff')};
 
   &:hover {
     color: #5ccc5c;
   }
-`
+`;
 
 export const HeaderButton = styled.button`
   ${HeaderButtonStyle};
   font-size: 1.6rem;
-`
+`;
 
 export const SidebarButton = styled.button`
   ${HeaderButtonStyle};
   font-size: 2.2rem;
-`
+`;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -7,4 +7,4 @@ export const Container = styled.div`
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
-`
+`;

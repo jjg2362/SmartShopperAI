@@ -1,5 +1,4 @@
-export const codes = `
-# Privacy Policy
+export const codes = `# Privacy Policy
 
 Please read the terms of this Privacy Policy (this “Policy” or these “Terms”) carefully. The Policy describes to users (“User,” or “Users,” or “you”) how Luckmon Inc. (“Luckmon”, “we,” “us” or “our”) collects, uses, discloses or otherwise processes  personal information (the terms “personal data” and “personal information” will be used to mean any information that is able to directly or indirectly identify you, which might differ slightly depending on the laws that apply where you are located) and other data we receive from Users using Luckmon’s website, mobile app, products and services (the “Services”). Examples of personal data include your name, email address, gender, age, and other information about you.
 
@@ -230,4 +229,4 @@ Data Privacy Officer
 Luckmon Inc.
 
 100 Baja, Irvine, California or via email at info@luckmon.com
-`
+`;

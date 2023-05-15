@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components';
 
 const TitleStyle = css`
   font-size: 4.2rem;
@@ -9,7 +9,7 @@ const TitleStyle = css`
   @media (max-width: 459px) {
     font-size: 3.4rem;
   }
-`
+`;
 
 const DescriptionStyle = css`
   font-size: 2.2rem;
@@ -19,11 +19,15 @@ const DescriptionStyle = css`
   @media (max-width: 459px) {
     font-size: 1.8rem;
   }
-`
+`;
 
 const GradientButton = css`
   cursor: pointer;
-  background: linear-gradient(to left, #caf423, #00cabe); /* 그라데이션 배경색 설정 */
+  background: linear-gradient(
+    to left,
+    #caf423,
+    #00cabe
+  ); /* 그라데이션 배경색 설정 */
   border: none;
   font-size: 2.4rem;
   color: #fff;
@@ -34,17 +38,17 @@ const GradientButton = css`
   @media (max-width: 459px) {
     font-size: 2rem;
   }
-`
+`;
 
 const SubTitleStyle = css`
   font-size: 1.6rem;
   color: #5ccc5c;
   font-weight: bold;
-  
+
   @media (max-width: 459px) {
     font-size: 1.4rem;
   }
-`
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -67,7 +71,7 @@ export const MissionSection = styled.section`
   background-color: #141619;
   width: 100%;
   overflow: hidden;
-`
+`;
 
 export const MissionWrapper = styled.div`
   width: 100%;
@@ -77,13 +81,13 @@ export const MissionWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   @media (max-width: 1220px) {
     max-width: auto;
     padding: 0 4rem;
     box-sizing: border-box;
   }
-`
+`;
 
 const ScaleUpAnimation = keyframes`
   from {
@@ -93,15 +97,6 @@ const ScaleUpAnimation = keyframes`
   to {
     opacity: 1;
     scale: 1;
-  }
-`;
-
-const FloatAnimation = keyframes`
-  from {
-    padding-bottom: 0;
-  }
-  to {
-    padding-bottom: 20px;
   }
 `;
 
@@ -136,7 +131,7 @@ export const MissionTitleWrapper = styled.div`
     margin-bottom: 6.5rem;
   }
 
-  & > img{
+  & > img {
     animation: ${ScaleUpAnimation} 1s ease-in-out forwards;
     width: 621px;
     height: auto;
@@ -151,7 +146,7 @@ export const MissionTitleWrapper = styled.div`
       height: auto;
     }
   }
-`
+`;
 
 export const MissionBackground = styled.div`
   position: absolute;
@@ -165,7 +160,7 @@ export const MissionBackground = styled.div`
   background-repeat: no-repeat;
   opacity: 0.5;
   z-index: 1;
-`
+`;
 
 export const TeamSection = styled.section`
   width: 100%;
@@ -173,14 +168,14 @@ export const TeamSection = styled.section`
   padding: 19.9rem 0 50rem 0;
   display: flex;
   justify-content: center;
-`
+`;
 
 export const TeamSectionWrapper = styled.div`
   max-width: 1220px;
   width: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const TeamTitleWrapper = styled.div`
   display: flex;
@@ -212,7 +207,7 @@ export const TeamTitleWrapper = styled.div`
   & > button {
     ${GradientButton};
   }
-`
+`;
 
 export const MemberList = styled.ul`
   margin-top: 18.9rem;
@@ -221,7 +216,7 @@ export const MemberList = styled.ul`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-`
+`;
 
 export const MemberItem = styled.li`
   display: flex;
@@ -249,4 +244,4 @@ export const MemberItem = styled.li`
       width: 80%;
     }
   }
-`
+`;

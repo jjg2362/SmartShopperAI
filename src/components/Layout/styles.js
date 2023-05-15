@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
@@ -14,7 +14,6 @@ export const Content = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
 
-export const FooterWrapper = styled.div `
-`
+export const FooterWrapper = styled.div``;

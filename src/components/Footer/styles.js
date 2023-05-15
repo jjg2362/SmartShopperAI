@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Conatiner = styled.footer`
   width: 100%;
@@ -74,7 +74,7 @@ export const FooterLeftWrapper = styled.div`
       margin-top: 2rem;
     }
 
-    & > button{
+    & > button {
       margin-bottom: 1rem;
       margin-right: 0;
     }
