@@ -16,14 +16,7 @@ We will only collect your personal data as described in this Privacy Policy and 
 
 If you sign into our Service using a third-party profile, we will import the first name and last name displayed in such profiles, such as information on Facebook or Google, on our platform.
 
-When you use our Services, we will also collect information about how you interact with the games advertised on our platform. The type of information we collect relates to: i) achievements that are unlocked, ii) in-game purchases, iii) other apps on your device, iv) the time you spend playing games, v) the units you’ve earned in Luckmon, and vi) the game experience earned (collectively “User Gaming Profile”). A user’s gaming profile is visible to other users via the chat social networking feature.
-
-We use this information exclusively for the purpose of fraud prevention and to ensure that prizes are not earned through bots, automated processes or fraudulent use of software. Upon redeeming a reward from our Shop, you will be prompted to provide a phone number, which is linked to your user account to ensure the uniqueness of your user registration within the mobile application. If you do not want to redeem a reward from our Shop, you can use all other features of the mobile application without providing your phone number.
-
-For all users 18 years old or above, when redeeming a reward through our Shop, we may verify your face via a ‘video selfie’ using a third party face verification technology. We use this information exclusively for the purpose of fraud prevention and to ensure that prizes are not earned through bots, automated processes or fraudulent use of software.
-
-By using our mobile application and accepting our Privacy Policy, you understand that requesting a reward within the Shop on the Luckmon mobile application will only be possible upon additional user authentication via face verification. Your consent applies to the processing of such biometric data as described below, and is an express acknowledgement that such data is “special category” personal data pursuant to Article 9 of the *General Data Protection Regulation* (GDPR).
-
+When you use our Services, we will also collect information about how you interact with the games advertised on our platform. The type of information we collect relates to: i) achievements that are unlocked, ii) in-game purchases, iii) other apps on your device, iv) the time you spend playing games, v) the Gems you’ve earned in Luckmon, and vi) the game experience earned (collectively “User Gaming Profile”). A user’s gaming profile is visible to other users via the chat social networking feature. You may provide other personal information such as services for linking to other accounts like Steam, PlayStation, Xbox, and other platforms.
 ‍
 
 ### AUTOMATICALLY COLLECTED INFORMATION
