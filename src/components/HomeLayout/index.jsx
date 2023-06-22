@@ -249,9 +249,19 @@ const HomeLayout = () => {
                 }
               >
                 <img
-                  src="/Home_assets/img_c_03.png"
+                  src="/Home_assets/store_google.png"
                   alt="google_play_store_image"
                 />
+              </button>
+
+              <button
+                onClick={() =>
+                  window.open(
+                    'https://apps.apple.com/us/app/luckmon/id1640481002'
+                  )
+                }
+              >
+                <img src="/Home_assets/store_apple.png" alt="app_store_image" />
               </button>
             </Styled.GooglePlayButtonWrapper>
             <img

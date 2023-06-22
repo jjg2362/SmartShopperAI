@@ -799,15 +799,8 @@ export const GooglePlayButtonWrapper = styled.div`
   }
 
   img {
-    &:nth-child(1) {
-      width: auto;
-      height: 80px;
-    }
-
-    &:nth-child(2) {
-      width: auto;
-      height: 80px;
-    }
+    width: auto;
+    height: 80px;
   }
 
   @media (max-width: 769px) {
