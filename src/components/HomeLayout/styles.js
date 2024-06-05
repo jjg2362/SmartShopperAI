@@ -1,5 +1,28 @@
 import styled, { css, keyframes } from 'styled-components';
 
+export const Content = styled.main`
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 100px 100px;
+  height: calc(100vh - 140px);
+`;
+
+export const InputForm = styled.form`
+  width: 100%;
+  align-self: flex-end;
+
+  & > input {
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #888;
+    padding: 10px; /* 내용물 작성했을 때 여백감 */
+  }
+`;
+
 const TitleStyle = css`
   font-size: 4.2rem;
   font-weight: bold;
@@ -77,14 +100,6 @@ export const Container = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-`;
-
-export const Content = styled.main`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
 `;
 
 export const FirstSection = styled.section`

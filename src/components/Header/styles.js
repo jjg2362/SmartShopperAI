@@ -8,6 +8,8 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   position: fixed;
+  background-color: #000;
+  opacity: 0.8;
 `;
 
 export const HeaderBackground = styled.div`
