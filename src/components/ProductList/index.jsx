@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as Styled from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const dummyProducts = [
   {
@@ -35,13 +36,19 @@ const dummyProducts = [
 ];
 
 const ProductList = () => {
+  const navigate = useNavigate();
+
+  const onClickProduct = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <Styled.Container>
       {dummyProducts.map((item) => (
         <li key={item.id}>
-          <a href="#">
+          <button onClick={() => onClickProduct(item.id)}>
             <img src={item.imgUrl} alt="시즌아이템1" />
-          </a>
+          </button>
 
           <span>
             <h4>{item.productName}</h4>

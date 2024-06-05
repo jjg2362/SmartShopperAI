@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tosspayments/payment-sdk": "^1.7.1",
+    "axios": "^1.7.2",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -15,7 +17,8 @@
     "slick-carousel": "^1.8.1",
     "store": "^2.0.12",
     "styled-components": "^5.3.9",
-    "styled-reset": "^4.4.6"
+    "styled-reset": "^4.4.6",
+    "universal-cookie": "^7.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
