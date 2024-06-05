@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import * as apiRequest from '../../_apis/apiRequest';
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -45,6 +46,29 @@ const HomeLayout = () => {
     return () => clearTimeout(timer);
   };
 
+  const getProductRecommendation = (userMessage) => {
+    apiRequest
+      .getAuth('/api/v1/product-recommendation', userMessage)
+      .then((response) => {
+        setChatList([
+          ...chatList,
+          {
+            from: 'bot',
+            message: response.data
+          }
+        ]);
+      })
+      .catch(() => {
+        setChatList([
+          ...chatList,
+          {
+            from: 'bot',
+            message: '상품을 추천할 수 없습니다.'
+          }
+        ]);
+      });
+  };
+
   return (
     <Styled.Container>
       <Header />
@@ -61,7 +85,6 @@ const HomeLayout = () => {
             placeholder="검색어를 입력하세요"
             value={searchTerm}
             onChange={handleSearchTermChange}
-            // onKeyPress={handleKeyPress} // Enter 키 이벤트 처리
           />
         </Styled.InputForm>
       </Styled.Content>
