@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import * as Styled from './styles';
 import PropTypes from 'prop-types';
 
-const ProductPageLayout = ({ productData }) => {
+const ProductPageLayout = ({ productData, postCartItem }) => {
   return (
     <>
       <Header />
@@ -67,7 +67,11 @@ const ProductPageLayout = ({ productData }) => {
                   </ul>
 
                   <Styled.PaymentList>
-                    <Styled.WhiteButton>add to cart</Styled.WhiteButton>
+                    <Styled.WhiteButton
+                      onClick={() => postCartItem(productData.id)}
+                    >
+                      add to cart
+                    </Styled.WhiteButton>
                     <Styled.WhiteButton>wish list</Styled.WhiteButton>
                     <Styled.BlackButton>buy now</Styled.BlackButton>
                   </Styled.PaymentList>
@@ -84,12 +88,13 @@ const ProductPageLayout = ({ productData }) => {
 
 ProductPageLayout.propTypes = {
   productData: PropTypes.shape({
-    productId: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
     imgUrl: PropTypes.string.isRequired
-  })
+  }).isRequired,
+  postCartItem: PropTypes.func.isRequired
 };
 
 export default ProductPageLayout;

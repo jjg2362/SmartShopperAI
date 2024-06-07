@@ -21,8 +21,8 @@ const HeaderMenuList = [
   },
   {
     id: 3,
-    name: '신상품',
-    path: '/contact'
+    name: '장바구니',
+    path: '/cart'
   }
 ];
 

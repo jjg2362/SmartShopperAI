@@ -9,6 +9,7 @@ export const Content = styled.main`
   box-sizing: border-box;
   padding: 100px 100px;
   height: calc(100vh - 140px);
+  overflow-y: hidden;
 `;
 
 export const InputForm = styled.form`

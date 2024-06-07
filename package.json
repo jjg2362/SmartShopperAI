@@ -5,6 +5,7 @@
   "dependencies": {
     "@tosspayments/payment-sdk": "^1.7.1",
     "axios": "^1.7.2",
+    "http-proxy-middleware": "^3.0.0",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

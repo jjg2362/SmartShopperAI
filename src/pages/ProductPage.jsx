@@ -14,7 +14,7 @@ const dummyProduct = {
 const ProductPage = () => {
   const getProductData = (productId) => {
     apiRequest
-      .getAuth(`/${productId}`)
+      .get(`/${productId}`)
       .then((response) => {
         setSeminarUserInfo(response.data);
       })
@@ -23,9 +23,23 @@ const ProductPage = () => {
       });
   };
 
+  const postCartItem = (productId) => {
+    apiRequest
+      .post(`/api/v1/carts"`, {
+        productId: productId
+      })
+      .then(() => {
+        alert('장바구니에 상품이 담겼습니다.');
+      })
+      .catch(() => {});
+  };
+
   return (
     <>
-      <ProductPageLayout productData={dummyProduct} />
+      <ProductPageLayout
+        productData={dummyProduct}
+        postCartItem={postCartItem}
+      />
     </>
   );
 };

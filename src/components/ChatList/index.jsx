@@ -7,7 +7,7 @@ const ChatList = ({ chats, chatRef }) => {
   return (
     <Styled.Container>
       <Styled.ChatBody>
-        <Styled.ChatBox>
+        <Styled.ChatBox ref={chatRef}>
           {chats.map((res, idx) => {
             return (
               <Styled.MessegeArea key={idx}>

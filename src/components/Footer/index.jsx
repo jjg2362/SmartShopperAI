@@ -13,7 +13,7 @@ const Footer = () => {
           <button>Privacy Policy</button>
         </Styled.FooterLeftWrapper>
 
-        <Styled.FooterRightWrapper>
+        {/* <Styled.FooterRightWrapper>
           <button>
             <img src="/Home_assets/Group 371.png" alt="twitter_icon" />
           </button>
@@ -29,7 +29,7 @@ const Footer = () => {
           <button>
             <img src="/Home_assets/Group 370.png" alt="medium_icon" />
           </button>
-        </Styled.FooterRightWrapper>
+        </Styled.FooterRightWrapper> */}
       </Styled.FooterWrapper>
     </Styled.Conatiner>
   );
