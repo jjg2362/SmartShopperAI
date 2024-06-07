@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import * as Styled from './styles';
 import ChatList from '../ChatList';
 import * as apiRequest from '../../_apis/apiRequest';
+import axios from 'axios';
 
 export const HomeLayout = () => {
   const navigate = useNavigate();
@@ -17,20 +18,14 @@ export const HomeLayout = () => {
     setSearchTerm(event.target.value);
   };
 
+  console.log(chatList);
+
   const onSubmitSearchTerm = (e) => {
     e.preventDefault();
-    const ChatObj = [
-      ...chatList,
-      {
-        from: 'me',
-        message: searchTerm
-      }
-    ];
-    setChatList([...ChatObj]);
+    const userMessage = { from: 'me', message: searchTerm };
+    setChatList((prevChatList) => [...prevChatList, userMessage]);
     setSearchTerm('');
-    // searchProduct(ChatObj);
-
-    getProductRecommendation(ChatObj[ChatObj.length - 1].message);
+    getProductRecommendation(searchTerm);
   };
 
   const scrollToBottom = () => {
@@ -42,20 +37,6 @@ export const HomeLayout = () => {
       });
     }
   };
-
-  // const searchProduct = (ChatObj) => {
-  //   getProductRecommendation(ChatObj[ChatObj.length - 1].message);
-  //   const timer = setTimeout(() => {
-  //     setChatList([
-  //       ...ChatObj,
-  //       {
-  //         from: 'bot',
-  //         message: '검색어를 통해 상품을 추천합니다.'
-  //       }
-  //     ]);
-  //   }, 500);
-  //   return () => clearTimeout(timer);
-  // };
 
   useEffect(() => {
     scrollToBottom();
@@ -69,14 +50,17 @@ export const HomeLayout = () => {
         size: 4
       })
       .then((response) => {
-        console.log(response.data);
-        // setChatList([
-        //   ...chatList,
-        //   {
-        //     from: 'bot',
-        //     message: response.data
-        //   }
-        // ]);
+        console.log(response.data.data);
+        const keywords = response.data.data.keywords.join(',');
+
+        setChatList((prevChatList) => [
+          ...prevChatList,
+          {
+            from: 'bot',
+            message: `${keywords} 키워드를 통해 상품을 추천합니다.`,
+            productList: response.data.data.products
+          }
+        ]);
       })
       .catch(() => {
         setChatList([

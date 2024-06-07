@@ -16,7 +16,9 @@ const ChatList = ({ chats, chatRef }) => {
                   {res.from === 'me' ? '나' : '상품추천봇'}
                 </Styled.Nick>
                 <Styled.Messege from={res.from}>{res.message}</Styled.Messege>
-                {res.from === 'bot' && <ProductList />}
+                {res.from === 'bot' && res.productList && (
+                  <ProductList productList={res.productList} />
+                )}
               </Styled.MessegeArea>
             );
           })}
@@ -30,7 +32,15 @@ ChatList.propTypes = {
   chats: PropTypes.arrayOf(
     PropTypes.shape({
       from: PropTypes.string.isRequired,
-      message: PropTypes.string.isRequired
+      message: PropTypes.string.isRequired,
+      productList: PropTypes.arrayOf(
+        PropTypes.shape({
+          productName: PropTypes.string.isRequired,
+          price: PropTypes.number.isRequired,
+          imageUrl: PropTypes.string.isRequired,
+          productCode: PropTypes.string.isRequired
+        }).isRequired
+      )
     }).isRequired
   ).isRequired,
   chatRef: PropTypes.object.isRequired

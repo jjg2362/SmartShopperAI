@@ -17,24 +17,13 @@ const ProductPageLayout = ({ productData, postCartItem }) => {
               <Styled.Detail>
                 <Styled.ProductImage>
                   <main>
-                    <img src={productData.imgUrl} alt="메인이미지" />
+                    <img src={productData.imageUrl} alt="메인이미지" />
                   </main>
-                  <ul>
-                    <li>
-                      <img src={productData.imgUrl} alt="상품이미지1" />
-                    </li>
-                    <li>
-                      <img src={productData.imgUrl} alt="상품이미지2" />
-                    </li>
-                    <li>
-                      <img src={productData.imgUrl} alt="상품이미지3" />
-                    </li>
-                  </ul>
                 </Styled.ProductImage>
                 <Styled.ProductDescription>
                   <ul>
                     <li>
-                      <h2>{productData.name}</h2>
+                      <h2>{productData.productName}</h2>
                     </li>
                     <li className="price">
                       <span>판매가</span>
@@ -89,10 +78,10 @@ const ProductPageLayout = ({ productData, postCartItem }) => {
 ProductPageLayout.propTypes = {
   productData: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
+    productName: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    description: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired
+    // description: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired
   }).isRequired,
   postCartItem: PropTypes.func.isRequired
 };

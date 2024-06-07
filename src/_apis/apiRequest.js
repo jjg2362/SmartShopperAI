@@ -122,14 +122,8 @@ export const deleteAuth = (url) => {
 
 export const get = (url) =>
   new Promise((resolve, reject) => {
-    const config = {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    };
-
     instance
-      .get(url, config)
+      .get(url)
       .then((response) => {
         resolve(response);
       })

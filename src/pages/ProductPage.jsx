@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import * as apiRequest from '../_apis/apiRequest';
 import ProductPageLayout from '../components/ProductPageLayout';
 
-const dummyProduct = {
-  productId: 0,
-  name: '지프 뉴 배럭 텐트',
-  price: 1430000,
-  description: '텐트, 이너 텐트, 그라운드시트, 우레탄창 포함',
-  imgUrl: '/assets/product1.jpg'
-};
-
 const ProductPage = () => {
+  const productId = useParams().productId;
+  const [productData, setProductData] = useState(null);
+
   const getProductData = (productId) => {
     apiRequest
-      .get(`/${productId}`)
+      .get(`/api/v1/products/${productId}`)
       .then((response) => {
-        setSeminarUserInfo(response.data);
+        console.log(response.data.data);
+        setProductData(response.data.data);
       })
       .catch(() => {
         setSeminarUserInfo(null);
       });
   };
+
+  useEffect(() => {
+    getProductData(productId);
+  }, [productId]);
 
   const postCartItem = (productId) => {
     apiRequest
@@ -36,10 +37,12 @@ const ProductPage = () => {
 
   return (
     <>
-      <ProductPageLayout
-        productData={dummyProduct}
-        postCartItem={postCartItem}
-      />
+      {productData && (
+        <ProductPageLayout
+          productData={productData}
+          postCartItem={postCartItem}
+        />
+      )}
     </>
   );
 };
