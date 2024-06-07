@@ -26,7 +26,7 @@ const ProductPage = () => {
 
   const postCartItem = (productId) => {
     apiRequest
-      .post(`/api/v1/carts"`, {
+      .post('/api/v1/carts', {
         productId: productId
       })
       .then(() => {

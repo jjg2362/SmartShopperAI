@@ -11,29 +11,30 @@ const CartLayout = () => {
     getCartList();
   }, []);
 
+  console.log(cartList);
+
   const getCartList = () => {
-    console.log('aaa');
     apiRequest
       .get('/api/v1/carts')
       .then((response) => {
-        console.log(response.data);
-        cartList(response.data);
+        setCartList(response.data.data);
       })
       .catch(() => {
         setCartList([]);
       });
   };
 
-  // const deleteCartItem = (productId) => {
-  //   apiRequest
-  //     .delete('/api/v1/product-recommendation', {
-  //       productId: productId
-  //     })
-  //     .then((response) => {
-  //       console.log(response.data);
-  //     })
-  //     .catch(() => {});
-  // };
+  const deleteCartItem = (productId) => {
+    console.log(productId);
+
+    apiRequest
+      .deletee(`/api/v1/carts/${productId}`)
+      .then((response) => {
+        console.log(response.data);
+        getCartList();
+      })
+      .catch(() => {});
+  };
 
   return (
     <Styled.Container>

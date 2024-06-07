@@ -49,6 +49,11 @@ export const CartItemImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const CartItemDescription = styled.div`
@@ -57,6 +62,11 @@ export const CartItemDescription = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-left: 20px;
+
+  & > p {
+    margin-top: 10px;
+    font-weight: 500;
+  }
 `;
 
 export const DeleteButton = styled.button`

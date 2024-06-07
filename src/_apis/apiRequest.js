@@ -159,6 +159,20 @@ export const patch = (url, body) =>
       });
   });
 
+export const deletee = (url, body) => {
+  return new Promise((resolve, reject) => {
+    instance
+      .delete(url, body)
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        reject(error);
+        // redirectToErrorPage(getHistory(), error);
+      });
+  });
+};
+
 // const redirectToErrorPage = (history: THistory, error) => {
 //     errorLog(error);
 //   if (error.response === null || error.response === undefined) {
